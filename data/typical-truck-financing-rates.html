@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Article","headline":"Typical Truck Financing Rates","description":"Typical APR ranges for commercial truck financing.","author":{"@type":"Organization","name":"Axiant Partners"}}
   </script>
@@ -95,6 +96,7 @@
           <div class="related-links">
             <a href="../questions/what-credit-score-needed-for-truck-financing.html">Credit Score for Truck Financing</a>
             <a href="../questions/how-long-do-truck-loans-last.html">How Long Do Truck Loans Last</a>
+            <a href="../data/typical-commercial-truck-down-payments.html">Typical Commercial Truck Down Payments</a>
             <a href="../questions/how-much-down-for-semi-truck.html">How Much Down for Semi Truck</a>
             <a href="../hubs/truck-financing-guide.html">Truck Financing Guide</a>
           </div>
@@ -111,5 +113,29 @@
       </div>
     </div>
   </footer>
+  <script>
+    (function() {
+      const ctx = document.getElementById('ratesChart');
+      if (!ctx) return;
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['720+', '680–719', '650–679', '600–649', '550–599'],
+          datasets: [
+            { label: 'APR midpoint (%)', data: [8, 10, 12, 14, 18], backgroundColor: ['rgba(115,169,255,0.7)', 'rgba(115,169,255,0.55)', 'rgba(156,220,255,0.5)', 'rgba(255,200,100,0.5)', 'rgba(255,150,100,0.5)'], borderColor: ['rgba(115,169,255,0.9)', 'rgba(115,169,255,0.8)', 'rgba(156,220,255,0.8)', 'rgba(255,200,100,0.8)', 'rgba(255,150,100,0.8)'], borderWidth: 1 }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: '#aebbd2' }, grid: { color: 'rgba(255,255,255,0.06)' } },
+            y: { ticks: { color: '#aebbd2', callback: v => v + '%' }, grid: { color: 'rgba(255,255,255,0.06)' } }
+          }
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

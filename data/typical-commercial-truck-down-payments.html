@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typical Commercial Truck Down Payments | 2025 Data</title>
+  <meta name="description" content="Typical commercial truck down payments by vehicle type and credit tier. Semi, dump truck, bucket truck, vocational equipment down payment percentages and dollar amounts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Typical Commercial Truck Down Payments","description":"Typical down payment data for commercial truck financing by type.","author":{"@type":"Organization","name":"Axiant Partners"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the typical down payment for a commercial truck?","acceptedAnswer":{"@type":"Answer","text":"Industry average: 15–25%. Strong credit may qualify with 0–10%. Lower credit or startups: 20–35%."}},
+    {"@type":"Question","name":"Do different truck types require different down payments?","acceptedAnswer":{"@type":"Answer","text":"Yes. New trucks often allow 10–20%; used 15–25%. Specialty equipment may vary. Credit is the main driver."}},
+    {"@type":"Question","name":"Can I finance a commercial truck with no down payment?","acceptedAnswer":{"@type":"Answer","text":"Yes. Strong credit and established businesses often qualify with $0 down. Requirements are risk-based."}}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="../index.html" class="brand">Axiant Partners</a>
+      <nav>
+        <a href="../hubs/commercial-vehicle-financing.html">Hubs</a>
+        <a href="../vehicles/semi-truck-financing.html">Vehicles</a>
+        <a href="https://axiantpartners.com/match?ref=truckhub" class="btn btn-sm" target="_blank" rel="noopener">Get Financing</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero compact">
+      <div class="container">
+        <p class="eyebrow">Data & Quick Facts</p>
+        <h1>Typical Commercial Truck Down Payments</h1>
+        <p class="lead">Typical commercial truck down payments range from 0–35% depending on credit, equipment type, and new vs. used. Strong credit often qualifies with little or no down payment; startups and lower credit may need 20–35%. This page summarizes typical percentages and example dollar amounts by truck type.</p>
+        <div class="hero-actions">
+          <a href="https://axiantpartners.com/match?ref=truckhub" class="btn" target="_blank" rel="noopener">Get Matched with Lenders</a>
+          <a href="../data/average-cost-of-commercial-trucks.html" class="btn btn-secondary">Average Truck Cost</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="article-content">
+          <div class="ai-quick-answer">
+            <h3>Quick Answer</h3>
+            <p>Typical down payment: 15–25% when required. Strong credit: often 0–10%. Lower credit/startups: 20–35%. New trucks: 10–20%; used: 15–25%. See <a href="../guides/truck-down-payment-requirements.html">down payment requirements</a>.</p>
+          </div>
+
+          <h2>Typical Down Payment by Credit Tier</h2>
+          <div class="chart-wrap">
+            <h3>Typical Down Payment % by Credit Profile</h3>
+            <div class="chart-container">
+              <canvas id="downPaymentChart"></canvas>
+            </div>
+          </div>
+          <table class="data-table">
+            <thead><tr><th>Credit Profile</th><th>New Truck</th><th>Used Truck</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>720+ (strong)</td><td>0–15%</td><td>10–20%</td><td>Best terms</td></tr>
+              <tr><td>680–719 (good)</td><td>10–20%</td><td>15–25%</td><td>Competitive</td></tr>
+              <tr><td>650–679 (fair)</td><td>15–25%</td><td>20–30%</td><td>Moderate</td></tr>
+              <tr><td>600–649</td><td>20–30%</td><td>25–35%</td><td>Higher</td></tr>
+              <tr><td>Below 600 / startups</td><td>25–35%</td><td>25–35%</td><td>Risk-based</td></tr>
+            </tbody>
+          </table>
+
+          <h2>Example Dollar Amounts by Truck Type</h2>
+          <p>Based on typical new-truck price midpoint and 20% down. Actual amounts vary by purchase price and lender.</p>
+          <table class="data-table">
+            <thead><tr><th>Truck Type</th><th>Typical New Price</th><th>20% Down</th><th>15% Down</th></tr></thead>
+            <tbody>
+              <tr><td>Semi tractor</td><td>$160,000</td><td>$32,000</td><td>$24,000</td></tr>
+              <tr><td>Dump truck</td><td>$115,000</td><td>$23,000</td><td>$17,250</td></tr>
+              <tr><td>Bucket truck</td><td>$165,000</td><td>$33,000</td><td>$24,750</td></tr>
+              <tr><td>Tow truck</td><td>$95,000</td><td>$19,000</td><td>$14,250</td></tr>
+              <tr><td>Vac truck</td><td>$140,000</td><td>$28,000</td><td>$21,000</td></tr>
+              <tr><td>Crane truck</td><td>$200,000</td><td>$40,000</td><td>$30,000</td></tr>
+              <tr><td>Fire truck</td><td>$500,000</td><td>$100,000</td><td>$75,000</td></tr>
+              <tr><td>Garbage truck</td><td>$300,000</td><td>$60,000</td><td>$45,000</td></tr>
+            </tbody>
+          </table>
+
+          <h2>Down Payment by Equipment Type</h2>
+          <table class="data-table">
+            <thead><tr><th>Equipment Type</th><th>New Typical %</th><th>Used Typical %</th></tr></thead>
+            <tbody>
+              <tr><td>Semi tractor</td><td>10–20%</td><td>15–25%</td></tr>
+              <tr><td>Dump truck</td><td>15–25%</td><td>20–30%</td></tr>
+              <tr><td>Bucket truck</td><td>10–20%</td><td>15–25%</td></tr>
+              <tr><td>Vocational (vac, tow, etc.)</td><td>15–25%</td><td>20–30%</td></tr>
+              <tr><td>Municipal (fire, garbage)</td><td>10–20%</td><td>15–25%</td></tr>
+            </tbody>
+          </table>
+
+          <div class="cta-stack" style="margin-top: 2rem;">
+            <a href="https://axiantpartners.com/match?ref=truckhub" class="btn" target="_blank" rel="noopener">Get Matched with Lenders</a>
+            <a href="../data/typical-truck-financing-rates.html" class="btn btn-secondary">Typical Financing Rates</a>
+          </div>
+
+          <h2 class="faq-section">Common Questions</h2>
+          <div class="faq-item"><h3>What is the typical down payment for a commercial truck?</h3><p>15–25% when required. Strong credit may qualify with 0–10%. Lower credit: 20–35%.</p></div>
+          <div class="faq-item"><h3>Can I get truck financing with no down payment?</h3><p>Yes. Strong credit and established businesses often qualify with $0 down. Requirements are risk-based.</p></div>
+          <div class="faq-item"><h3>Do used trucks require larger down payments?</h3><p>Often 15–25% vs. 10–20% for new. Older or higher-mileage units may require more.</p></div>
+          <div class="faq-item"><h3>Does a larger down payment lower my rate?</h3><p>Often yes. Larger down payments can qualify for better APRs and lower monthly payments.</p></div>
+          <div class="faq-item"><h3>What credit score gets the lowest down payment?</h3><p>720+ often qualifies with 0–10%. 680–719: 10–20%. Below 650: 20–35%.</p></div>
+
+          <h3>Related Pages</h3>
+          <div class="related-links">
+            <a href="../data/average-semi-truck-down-payment.html">Average Semi Truck Down Payment</a>
+            <a href="../guides/truck-down-payment-requirements.html">Truck Down Payment Requirements</a>
+            <a href="../data/average-cost-of-commercial-trucks.html">Average Cost of Commercial Trucks</a>
+            <a href="../data/typical-truck-financing-rates.html">Typical Truck Financing Rates</a>
+            <a href="../data/commercial-truck-equipment-lifespan.html">Equipment Lifespan</a>
+            <a href="../hubs/truck-financing-guide.html">Truck Financing Guide</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© 2026 Axiant Partners.</p>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="https://axiantpartners.com/match?ref=truckhub" target="_blank" rel="noopener">Get Financing</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function() {
+      const ctx = document.getElementById('downPaymentChart');
+      if (!ctx) return;
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['720+', '680–719', '650–679', '600–649', 'Below 600 / Startup'],
+          datasets: [
+            { label: 'New truck (midpoint %)', data: [7, 15, 20, 25, 30], backgroundColor: 'rgba(115,169,255,0.6)', borderColor: 'rgba(115,169,255,0.9)', borderWidth: 1 },
+            { label: 'Used truck (midpoint %)', data: [15, 20, 25, 30, 30], backgroundColor: 'rgba(156,220,255,0.4)', borderColor: 'rgba(156,220,255,0.7)', borderWidth: 1 }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { labels: { color: '#aebbd2' } } },
+          scales: {
+            x: { ticks: { color: '#aebbd2', maxRotation: 25 }, grid: { color: 'rgba(255,255,255,0.06)' } },
+            y: { ticks: { color: '#aebbd2', callback: v => v + '%' }, grid: { color: 'rgba(255,255,255,0.06)' } }
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Article","headline":"Commercial Truck Depreciation Chart","description":"Depreciation rates for commercial trucks.","author":{"@type":"Organization","name":"Axiant Partners"}}
   </script>
@@ -54,6 +55,12 @@
           </div>
 
           <h2>Typical Depreciation by Truck Type</h2>
+          <div class="chart-wrap">
+            <h3>Estimated Value Over Time: $150,000 Semi Tractor (15–25% Y1, 12%/yr after)</h3>
+            <div class="chart-container tall">
+              <canvas id="depreciationChart"></canvas>
+            </div>
+          </div>
           <table class="data-table">
             <thead><tr><th>Truck Type</th><th>Year 1</th><th>Years 2–5 (approx.)</th><th>Notes</th></tr></thead>
             <tbody>
@@ -94,6 +101,7 @@
           <h3>Related Pages</h3>
           <div class="related-links">
             <a href="../data/average-cost-of-commercial-trucks.html">Average Cost of Commercial Trucks</a>
+            <a href="../data/commercial-truck-equipment-lifespan.html">Equipment Lifespan</a>
             <a href="../data/commercial-truck-operating-costs.html">Commercial Truck Operating Costs</a>
             <a href="../guides/new-vs-used-truck-financing.html">New vs Used Truck Financing</a>
             <a href="../hubs/truck-financing-guide.html">Truck Financing Guide</a>
@@ -111,5 +119,31 @@
       </div>
     </div>
   </footer>
+  <script>
+    (function() {
+      const ctx = document.getElementById('depreciationChart');
+      if (!ctx) return;
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Year 0', 'Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
+          datasets: [
+            { label: 'Optimistic (15% Y1, 10%/yr)', data: [150000, 127500, 114750, 103275, 92948, 83653], borderColor: 'rgba(115,169,255,0.9)', backgroundColor: 'rgba(115,169,255,0.1)', fill: true, tension: 0.2 },
+            { label: 'Typical (20% Y1, 12%/yr)', data: [150000, 120000, 105600, 92928, 81777, 71964], borderColor: 'rgba(156,220,255,0.8)', backgroundColor: 'rgba(156,220,255,0.08)', fill: true, tension: 0.2 },
+            { label: 'Heavy use (25% Y1, 15%/yr)', data: [150000, 112500, 95625, 81281, 69089, 58726], borderColor: 'rgba(255,180,100,0.8)', backgroundColor: 'rgba(255,180,100,0.06)', fill: true, tension: 0.2 }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { labels: { color: '#aebbd2' } } },
+          scales: {
+            x: { ticks: { color: '#aebbd2' }, grid: { color: 'rgba(255,255,255,0.06)' } },
+            y: { ticks: { color: '#aebbd2', callback: v => '$' + (v/1000) + 'K' }, grid: { color: 'rgba(255,255,255,0.06)' } }
+          }
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

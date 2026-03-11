@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Article","headline":"Commercial Truck Operating Costs","description":"Operating cost data for commercial trucks.","author":{"@type":"Organization","name":"Axiant Partners"}}
   </script>
@@ -54,6 +55,18 @@
           </div>
 
           <h2>Typical Operating Cost Categories (Semi)</h2>
+          <div class="chart-wrap">
+            <h3>Semi Truck Operating Cost Breakdown (100K mi/year)</h3>
+            <div class="chart-container pie">
+              <canvas id="costBreakdownChart"></canvas>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <h3>Monthly Operating Cost by Truck Type (Typical Range)</h3>
+            <div class="chart-container">
+              <canvas id="monthlyCostChart"></canvas>
+            </div>
+          </div>
           <table class="data-table">
             <thead><tr><th>Category</th><th>Per Mile (approx.)</th><th>Annual (100K mi)</th></tr></thead>
             <tbody>
@@ -108,7 +121,9 @@
           <h3>Related Pages</h3>
           <div class="related-links">
             <a href="../data/commercial-truck-depreciation-chart.html">Commercial Truck Depreciation</a>
+            <a href="../data/commercial-truck-equipment-lifespan.html">Equipment Lifespan</a>
             <a href="../data/average-cost-of-commercial-trucks.html">Average Truck Cost</a>
+            <a href="../data/typical-commercial-truck-down-payments.html">Typical Down Payments</a>
             <a href="../vehicles/semi-truck-financing.html">Semi Truck Financing</a>
             <a href="../hubs/truck-financing-guide.html">Truck Financing Guide</a>
           </div>
@@ -125,5 +140,54 @@
       </div>
     </div>
   </footer>
+  <script>
+    (function() {
+      const pieCtx = document.getElementById('costBreakdownChart');
+      if (pieCtx) {
+        new Chart(pieCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Fuel', 'Maintenance', 'Insurance', 'Tires', 'Permits/fees', 'Other'],
+            datasets: [{
+              data: [57.5, 12.5, 14, 4, 3.5, 9],
+              backgroundColor: ['rgba(115,169,255,0.8)', 'rgba(156,220,255,0.6)', 'rgba(100,180,255,0.5)', 'rgba(80,150,220,0.5)', 'rgba(60,130,200,0.5)', 'rgba(255,255,255,0.15)'],
+              borderColor: ['rgba(115,169,255,1)', 'rgba(156,220,255,0.9)', 'rgba(100,180,255,0.8)', 'rgba(80,150,220,0.8)', 'rgba(60,130,200,0.8)', 'rgba(255,255,255,0.3)'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { labels: { color: '#aebbd2' } } }
+          }
+        });
+      }
+      const barCtx = document.getElementById('monthlyCostChart');
+      if (barCtx) {
+        new Chart(barCtx, {
+          type: 'bar',
+          data: {
+            labels: ['Semi truck', 'Dump truck', 'Bucket truck', 'Vac truck', 'Box truck'],
+            datasets: [{
+              label: 'Monthly cost midpoint ($)',
+              data: [11500, 9000, 7500, 9000, 6000],
+              backgroundColor: 'rgba(115,169,255,0.6)',
+              borderColor: 'rgba(115,169,255,0.9)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { ticks: { color: '#aebbd2' }, grid: { color: 'rgba(255,255,255,0.06)' } },
+              y: { ticks: { color: '#aebbd2', callback: v => '$' + (v/1000) + 'K' }, grid: { color: 'rgba(255,255,255,0.06)' } }
+            }
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
