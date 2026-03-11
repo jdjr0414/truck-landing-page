@@ -34,5 +34,25 @@ input::placeholder, textarea::placeholder { color: #91a2bf; } .form-actions { di
 .faq-item h3 { margin: 0 0 0.5rem; font-size: 1.05rem; } .faq-item p { margin: 0; color: var(--muted); font-size: 0.98rem; }
 .related-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 1rem; }
 .related-links a { color: var(--accent); font-weight: 500; }
+.quick-answer { background: rgba(115,169,255,0.08); border: 1px solid rgba(115,169,255,0.2); border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; }
+.quick-answer h3 { font-size: 1rem; margin: 0 0 0.5rem; color: var(--accent-2); }
+.quick-answer p, .quick-answer ul { margin: 0 0 0.75rem; color: var(--muted); font-size: 0.95rem; }
+.quick-answer ul:last-child { margin-bottom: 0; }
+.data-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+.data-table th, .data-table td { border: 1px solid var(--line); padding: 0.75rem 1rem; text-align: left; color: var(--muted); }
+.data-table th { background: rgba(255,255,255,0.04); color: var(--accent-2); font-weight: 600; }
+.data-table tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+.quick-facts { background: rgba(115,169,255,0.08); border: 1px solid rgba(115,169,255,0.2); border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; }
+.quick-facts h3 { font-size: 1rem; margin: 0 0 1rem; color: var(--accent-2); }
+.quick-facts p { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.95rem; }
+.quick-facts p:last-child { margin-bottom: 0; }
+.quick-facts dl, .quick-facts ul { margin: 0; padding: 0; color: var(--muted); font-size: 0.95rem; }
+.quick-facts dt, .quick-facts li { margin-top: 0.5rem; }
+.quick-facts dt:first-child, .quick-facts li:first-child { margin-top: 0; }
+.quick-facts dd { margin: 0 0 0 1rem; }
+.quick-facts dd::before { content: "— "; color: var(--accent); }
+.table-links { margin: 1rem 0; padding: 0; }
+.table-links p { margin: 0 0 0.5rem; font-weight: 600; color: var(--accent-2); font-size: 0.9rem; }
+.table-links a { display: inline-block; margin-right: 1rem; margin-bottom: 0.5rem; }
 @media (max-width: 1024px) { .hero-grid, .split-grid, .cta-band-inner, .card-grid.four, .card-grid.three, .steps { grid-template-columns: 1fr 1fr; } .steps .step:last-child { grid-column: span 2; } }
 @media (max-width: 720px) { .hero-grid, .split-grid, .cta-band-inner, .card-grid.four, .card-grid.three, .steps, .form-grid { grid-template-columns: 1fr; } .steps .step:last-child { grid-column: auto; } h1 { max-width: 100%; } .nav { align-items: flex-start; padding: 1rem 0; } }
