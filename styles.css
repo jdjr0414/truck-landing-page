@@ -238,6 +238,36 @@ input::placeholder, textarea::placeholder { color: #999; }
 .definition-section h3 { font-size: 1rem; margin: 0 0 0.75rem; color: var(--text); font-weight: 700; }
 .definition-section p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.6; }
 
+.key-facts {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.key-facts h3 { font-size: 1rem; margin: 0 0 0.75rem; color: var(--text); font-weight: 700; }
+.key-facts ul { margin: 0; padding-left: 1.25rem; color: var(--muted); font-size: 1rem; line-height: 1.7; }
+
+.equipment-data-snapshot {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.equipment-data-snapshot h3 { font-size: 1rem; margin: 0 0 1rem; color: var(--text); font-weight: 700; }
+.equipment-data-snapshot .data-table { margin: 0; }
+
+.step-by-step-overview {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.step-by-step-overview h3 { font-size: 1rem; margin: 0 0 1rem; color: var(--text); font-weight: 700; }
+.step-by-step-overview ol { margin: 0; padding-left: 1.5rem; color: var(--muted); font-size: 1rem; line-height: 1.8; }
+
 .ai-quick-answer {
   background: var(--accent-light);
   border: 1px solid rgba(196,93,10,0.25);
