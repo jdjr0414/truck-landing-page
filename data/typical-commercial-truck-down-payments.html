@@ -7,7 +7,7 @@
   <meta name="description" content="Typical commercial truck down payments by vehicle type and credit tier. Semi, dump truck, bucket truck, vocational equipment down payment percentages and dollar amounts." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script type="application/ld+json">
@@ -142,17 +142,17 @@
         data: {
           labels: ['720+', '680–719', '650–679', '600–649', 'Below 600 / Startup'],
           datasets: [
-            { label: 'New truck (midpoint %)', data: [7, 15, 20, 25, 30], backgroundColor: 'rgba(115,169,255,0.6)', borderColor: 'rgba(115,169,255,0.9)', borderWidth: 1 },
+            { label: 'New truck (midpoint %)', data: [7, 15, 20, 25, 30], backgroundColor: 'rgba(196,93,10,0.6)', borderColor: 'rgba(196,93,10,0.9)', borderWidth: 1 },
             { label: 'Used truck (midpoint %)', data: [15, 20, 25, 30, 30], backgroundColor: 'rgba(156,220,255,0.4)', borderColor: 'rgba(156,220,255,0.7)', borderWidth: 1 }
           ]
         },
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          plugins: { legend: { labels: { color: '#aebbd2' } } },
+          plugins: { legend: { labels: { color: '#5c574d' } } },
           scales: {
-            x: { ticks: { color: '#aebbd2', maxRotation: 25 }, grid: { color: 'rgba(255,255,255,0.06)' } },
-            y: { ticks: { color: '#aebbd2', callback: v => v + '%' }, grid: { color: 'rgba(255,255,255,0.06)' } }
+            x: { ticks: { color: '#5c574d', maxRotation: 25 }, grid: { color: 'rgba(0,0,0,0.06)' } },
+            y: { ticks: { color: '#5c574d', callback: v => v + '%' }, grid: { color: 'rgba(0,0,0,0.06)' } }
           }
         }
       });

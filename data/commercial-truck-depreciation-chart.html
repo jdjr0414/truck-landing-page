@@ -7,7 +7,7 @@
   <meta name="description" content="Commercial truck depreciation rates by type. How much do semi trucks, dump trucks, and vocational trucks depreciate? Depreciation chart and data." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script type="application/ld+json">
@@ -128,18 +128,18 @@
         data: {
           labels: ['Year 0', 'Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
           datasets: [
-            { label: 'Optimistic (15% Y1, 10%/yr)', data: [150000, 127500, 114750, 103275, 92948, 83653], borderColor: 'rgba(115,169,255,0.9)', backgroundColor: 'rgba(115,169,255,0.1)', fill: true, tension: 0.2 },
-            { label: 'Typical (20% Y1, 12%/yr)', data: [150000, 120000, 105600, 92928, 81777, 71964], borderColor: 'rgba(156,220,255,0.8)', backgroundColor: 'rgba(156,220,255,0.08)', fill: true, tension: 0.2 },
+            { label: 'Optimistic (15% Y1, 10%/yr)', data: [150000, 127500, 114750, 103275, 92948, 83653], borderColor: 'rgba(196,93,10,0.9)', backgroundColor: 'rgba(196,93,10,0.1)', fill: true, tension: 0.2 },
+            { label: 'Typical (20% Y1, 12%/yr)', data: [150000, 120000, 105600, 92928, 81777, 71964], borderColor: 'rgba(139,69,19,0.8)', backgroundColor: 'rgba(139,69,19,0.08)', fill: true, tension: 0.2 },
             { label: 'Heavy use (25% Y1, 15%/yr)', data: [150000, 112500, 95625, 81281, 69089, 58726], borderColor: 'rgba(255,180,100,0.8)', backgroundColor: 'rgba(255,180,100,0.06)', fill: true, tension: 0.2 }
           ]
         },
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          plugins: { legend: { labels: { color: '#aebbd2' } } },
+          plugins: { legend: { labels: { color: '#5c574d' } } },
           scales: {
-            x: { ticks: { color: '#aebbd2' }, grid: { color: 'rgba(255,255,255,0.06)' } },
-            y: { ticks: { color: '#aebbd2', callback: v => '$' + (v/1000) + 'K' }, grid: { color: 'rgba(255,255,255,0.06)' } }
+            x: { ticks: { color: '#5c574d' }, grid: { color: 'rgba(0,0,0,0.06)' } },
+            y: { ticks: { color: '#5c574d', callback: v => '$' + (v/1000) + 'K' }, grid: { color: 'rgba(0,0,0,0.06)' } }
           }
         }
       });

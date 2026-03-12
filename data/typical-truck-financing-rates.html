@@ -7,7 +7,7 @@
   <meta name="description" content="Typical truck financing rates and APR ranges by credit tier. Commercial truck loan rates 2025." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script type="application/ld+json">
@@ -122,7 +122,7 @@
         data: {
           labels: ['720+', '680–719', '650–679', '600–649', '550–599'],
           datasets: [
-            { label: 'APR midpoint (%)', data: [8, 10, 12, 14, 18], backgroundColor: ['rgba(115,169,255,0.7)', 'rgba(115,169,255,0.55)', 'rgba(156,220,255,0.5)', 'rgba(255,200,100,0.5)', 'rgba(255,150,100,0.5)'], borderColor: ['rgba(115,169,255,0.9)', 'rgba(115,169,255,0.8)', 'rgba(156,220,255,0.8)', 'rgba(255,200,100,0.8)', 'rgba(255,150,100,0.8)'], borderWidth: 1 }
+            { label: 'APR midpoint (%)', data: [8, 10, 12, 14, 18], backgroundColor: ['rgba(196,93,10,0.7)', 'rgba(196,93,10,0.55)', 'rgba(180,100,40,0.5)', 'rgba(140,85,50,0.5)', 'rgba(120,70,45,0.5)'], borderColor: ['rgba(196,93,10,0.9)', 'rgba(196,93,10,0.8)', 'rgba(180,100,40,0.8)', 'rgba(140,85,50,0.8)', 'rgba(120,70,45,0.8)'], borderWidth: 1 }
           ]
         },
         options: {
@@ -130,8 +130,8 @@
           maintainAspectRatio: false,
           plugins: { legend: { display: false } },
           scales: {
-            x: { ticks: { color: '#aebbd2' }, grid: { color: 'rgba(255,255,255,0.06)' } },
-            y: { ticks: { color: '#aebbd2', callback: v => v + '%' }, grid: { color: 'rgba(255,255,255,0.06)' } }
+            x: { ticks: { color: '#5c574d' }, grid: { color: 'rgba(0,0,0,0.06)' } },
+            y: { ticks: { color: '#5c574d', callback: v => v + '%' }, grid: { color: 'rgba(0,0,0,0.06)' } }
           }
         }
       });

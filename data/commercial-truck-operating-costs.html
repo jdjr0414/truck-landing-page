@@ -7,7 +7,7 @@
   <meta name="description" content="Commercial truck operating costs: fuel, maintenance, insurance, tires, and more. Per-mile and annual cost estimates for semi and vocational trucks." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script type="application/ld+json">
@@ -150,15 +150,15 @@
             labels: ['Fuel', 'Maintenance', 'Insurance', 'Tires', 'Permits/fees', 'Other'],
             datasets: [{
               data: [57.5, 12.5, 14, 4, 3.5, 9],
-              backgroundColor: ['rgba(115,169,255,0.8)', 'rgba(156,220,255,0.6)', 'rgba(100,180,255,0.5)', 'rgba(80,150,220,0.5)', 'rgba(60,130,200,0.5)', 'rgba(255,255,255,0.15)'],
-              borderColor: ['rgba(115,169,255,1)', 'rgba(156,220,255,0.9)', 'rgba(100,180,255,0.8)', 'rgba(80,150,220,0.8)', 'rgba(60,130,200,0.8)', 'rgba(255,255,255,0.3)'],
+              backgroundColor: ['rgba(196,93,10,0.8)', 'rgba(180,120,50,0.6)', 'rgba(139,69,19,0.5)', 'rgba(160,100,40,0.5)', 'rgba(140,90,35,0.5)', 'rgba(0,0,0,0.08)'],
+              borderColor: ['rgba(196,93,10,1)', 'rgba(180,120,50,0.9)', 'rgba(139,69,19,0.8)', 'rgba(160,100,40,0.8)', 'rgba(140,90,35,0.8)', 'rgba(0,0,0,0.15)'],
               borderWidth: 1
             }]
           },
           options: {
             responsive: true,
             maintainAspectRatio: false,
-            plugins: { legend: { labels: { color: '#aebbd2' } } }
+            plugins: { legend: { labels: { color: '#5c574d' } } }
           }
         });
       }
@@ -171,8 +171,8 @@
             datasets: [{
               label: 'Monthly cost midpoint ($)',
               data: [11500, 9000, 7500, 9000, 6000],
-              backgroundColor: 'rgba(115,169,255,0.6)',
-              borderColor: 'rgba(115,169,255,0.9)',
+              backgroundColor: 'rgba(196,93,10,0.6)',
+              borderColor: 'rgba(196,93,10,0.9)',
               borderWidth: 1
             }]
           },
@@ -181,8 +181,8 @@
             maintainAspectRatio: false,
             plugins: { legend: { display: false } },
             scales: {
-              x: { ticks: { color: '#aebbd2' }, grid: { color: 'rgba(255,255,255,0.06)' } },
-              y: { ticks: { color: '#aebbd2', callback: v => '$' + (v/1000) + 'K' }, grid: { color: 'rgba(255,255,255,0.06)' } }
+              x: { ticks: { color: '#5c574d' }, grid: { color: 'rgba(255,255,255,0.06)' } },
+              y: { ticks: { color: '#5c574d', callback: v => '$' + (v/1000) + 'K' }, grid: { color: 'rgba(255,255,255,0.06)' } }
             }
           }
         });
