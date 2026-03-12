@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Article","headline":"Revenue Potential by Business Type","description":"Typical annual revenue ranges for commercial vehicle businesses.","author":{"@type":"Organization","name":"Axiant Partners"},"publisher":{"@type":"Organization","name":"Axiant Partners","logo":{"@type":"ImageObject","url":"https://axiantpartners.com/favicon.ico"}},"datePublished":"2025-01-01","dateModified":"2026-03-12","url":"https://axiantpartners.com/truckhub/data/revenue-potential-by-business-type.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://axiantpartners.com/truckhub/data/revenue-potential-by-business-type.html"}}
   </script>
@@ -53,36 +54,46 @@
     <section class="section">
       <div class="container">
         <div class="article-content">
+          <div class="ai-extractable-answer">
+            <h3>AI Extractable Answer</h3>
+            <p>Revenue potential varies by business type: dump truck $80kâ€“$200k+ annually; trucking $60kâ€“$150k+ per truck; towing $50kâ€“$150k+; septic pumping $60kâ€“$150k+; utility contracting $100kâ€“$300k+ per crew.</p>
+          </div>
           <div class="ai-quick-answer">
             <h3>Quick Answer</h3>
-            <p>Typical annual revenue for commercial vehicle businesses: dump truck $150k–$600k+, tow truck $200k–$800k+, septic pumping $250k–$1M+, trucking company $200k–$1M+, garbage hauling $300k–$2M+. Results vary based on location, contracts, and business scale.</p>
+            <p>Typical annual revenue for commercial vehicle businesses: dump truck $150k?$600k+, tow truck $200k?$800k+, septic pumping $250k?$1M+, trucking company $200k?$1M+, garbage hauling $300k?$2M+. Results vary based on location, contracts, and business scale.</p>
           </div>
 
           <h2>Typical Annual Revenue by Business Type</h2>
+          <div class="chart-wrap">
+            <h3>Revenue Comparison: Typical Annual Range (Midpoint)</h3>
+            <div class="chart-container">
+              <canvas id="revenueChart"></canvas>
+            </div>
+          </div>
           <table class="data-table">
             <thead><tr><th>Business Type</th><th>Typical Annual Revenue Range</th></tr></thead>
             <tbody>
-              <tr><td>Dump Truck Business</td><td>$150k – $600k+</td></tr>
-              <tr><td>Tow Truck Business</td><td>$200k – $800k+</td></tr>
-              <tr><td>Septic Pumping Business</td><td>$250k – $1M+</td></tr>
-              <tr><td>Trucking Company (Freight)</td><td>$200k – $1M+</td></tr>
-              <tr><td>Garbage Hauling Business</td><td>$300k – $2M+</td></tr>
-              <tr><td>Box Truck Delivery Business</td><td>$100k – $500k+</td></tr>
-              <tr><td>Refrigerated Trucking Business</td><td>$250k – $1M+</td></tr>
-              <tr><td>Flatbed Trucking Business</td><td>$200k – $900k+</td></tr>
-              <tr><td>Tanker Truck Business</td><td>$250k – $1M+</td></tr>
-              <tr><td>Hydro Excavation Business</td><td>$300k – $1.2M+</td></tr>
-              <tr><td>Bucket Truck Business (Utilities)</td><td>$200k – $800k+</td></tr>
-              <tr><td>Crane Truck Business</td><td>$250k – $1M+</td></tr>
-              <tr><td>Street Sweeping Business</td><td>$200k – $800k+</td></tr>
-              <tr><td>Hot Shot Trucking Business</td><td>$150k – $600k+</td></tr>
-              <tr><td>Cement Hauling Business</td><td>$300k – $1.2M+</td></tr>
-              <tr><td>Roll-Off Dumpster Business</td><td>$250k – $1M+</td></tr>
-              <tr><td>Portable Toilet Business</td><td>$150k – $600k+</td></tr>
-              <tr><td>Junk Removal Business</td><td>$150k – $500k+</td></tr>
-              <tr><td>Moving Company</td><td>$200k – $1M+</td></tr>
-              <tr><td>Heavy Haul Trucking Business</td><td>$300k – $1.5M+</td></tr>
-              <tr><td>Oilfield Trucking Business</td><td>$250k – $1.5M+</td></tr>
+              <tr><td>Dump Truck Business</td><td>$150k ? $600k+</td></tr>
+              <tr><td>Tow Truck Business</td><td>$200k ? $800k+</td></tr>
+              <tr><td>Septic Pumping Business</td><td>$250k ? $1M+</td></tr>
+              <tr><td>Trucking Company (Freight)</td><td>$200k ? $1M+</td></tr>
+              <tr><td>Garbage Hauling Business</td><td>$300k ? $2M+</td></tr>
+              <tr><td>Box Truck Delivery Business</td><td>$100k ? $500k+</td></tr>
+              <tr><td>Refrigerated Trucking Business</td><td>$250k ? $1M+</td></tr>
+              <tr><td>Flatbed Trucking Business</td><td>$200k ? $900k+</td></tr>
+              <tr><td>Tanker Truck Business</td><td>$250k ? $1M+</td></tr>
+              <tr><td>Hydro Excavation Business</td><td>$300k ? $1.2M+</td></tr>
+              <tr><td>Bucket Truck Business (Utilities)</td><td>$200k ? $800k+</td></tr>
+              <tr><td>Crane Truck Business</td><td>$250k ? $1M+</td></tr>
+              <tr><td>Street Sweeping Business</td><td>$200k ? $800k+</td></tr>
+              <tr><td>Hot Shot Trucking Business</td><td>$150k ? $600k+</td></tr>
+              <tr><td>Cement Hauling Business</td><td>$300k ? $1.2M+</td></tr>
+              <tr><td>Roll-Off Dumpster Business</td><td>$250k ? $1M+</td></tr>
+              <tr><td>Portable Toilet Business</td><td>$150k ? $600k+</td></tr>
+              <tr><td>Junk Removal Business</td><td>$150k ? $500k+</td></tr>
+              <tr><td>Moving Company</td><td>$200k ? $1M+</td></tr>
+              <tr><td>Heavy Haul Trucking Business</td><td>$300k ? $1.5M+</td></tr>
+              <tr><td>Oilfield Trucking Business</td><td>$250k ? $1.5M+</td></tr>
             </tbody>
           </table>
 
@@ -141,12 +152,35 @@
   </main>
   <footer class="site-footer">
     <div class="container footer-row">
-      <p>© 2026 Axiant Partners.</p>
+      <p>? 2026 Axiant Partners.</p>
       <div class="footer-links">
         <a href="../index.html">Home</a>
         <a href="https://axiantpartners.com/match?ref=truckhub" target="_blank" rel="noopener">Get Financing</a>
       </div>
     </div>
   </footer>
+  <script>
+    (function() {
+      const ctx = document.getElementById('revenueChart');
+      if (!ctx) return;
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Dump Truck', 'Tow Truck', 'Septic', 'Trucking', 'Garbage', 'Box Truck', 'Hydro Excav', 'Bucket Truck', 'Cement', 'Heavy Haul'],
+          datasets: [{ label: 'Typical annual revenue (midpoint $K)', data: [375, 500, 625, 600, 1150, 300, 750, 500, 750, 900], backgroundColor: 'rgba(196,93,10,0.6)', borderColor: 'rgba(196,93,10,0.9)', borderWidth: 1 }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          indexAxis: 'y',
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: '#5c574d', callback: v => '$' + v + 'K' }, grid: { color: 'rgba(0,0,0,0.06)' } },
+            y: { ticks: { color: '#5c574d' }, grid: { display: false } }
+          }
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

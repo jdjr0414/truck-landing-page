@@ -218,6 +218,26 @@ input::placeholder, textarea::placeholder { color: #999; }
 .related-links a { color: var(--accent); font-weight: 500; }
 .related-links a:hover { color: var(--accent-hover); }
 
+.ai-extractable-answer {
+  background: var(--accent-light);
+  border: 1px solid rgba(196,93,10,0.25);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.ai-extractable-answer h3 { font-size: 1rem; margin: 0 0 0.75rem; color: var(--accent-2); font-weight: 700; }
+.ai-extractable-answer p { margin: 0; color: var(--text); font-size: 1rem; line-height: 1.6; }
+
+.definition-section {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.definition-section h3 { font-size: 1rem; margin: 0 0 0.75rem; color: var(--text); font-weight: 700; }
+.definition-section p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.6; }
+
 .ai-quick-answer {
   background: var(--accent-light);
   border: 1px solid rgba(196,93,10,0.25);
@@ -266,6 +286,19 @@ input::placeholder, textarea::placeholder { color: #999; }
 .table-links p { margin: 0 0 0.5rem; font-weight: 600; color: var(--text); font-size: 0.9rem; }
 .table-links a { display: inline-block; margin-right: 1rem; margin-bottom: 0.5rem; color: var(--accent); }
 
+.suggested-visuals {
+  background: var(--panel);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.suggested-visuals h3 { font-size: 0.9rem; margin: 0 0 0.5rem; color: var(--text); font-weight: 600; }
+.suggested-visuals ul { margin: 0; padding-left: 1.25rem; }
+.suggested-visuals li { margin-top: 0.25rem; }
+
 /* Data charts */
 .chart-wrap {
   background: var(--panel);
@@ -277,6 +310,7 @@ input::placeholder, textarea::placeholder { color: #999; }
   box-shadow: var(--shadow);
 }
 .chart-wrap h3 { font-size: 1rem; margin: 0 0 1rem; color: var(--text); font-weight: 600; }
+.chart-wrap figcaption { font-size: 0.875rem; color: var(--muted); margin-top: 0.75rem; text-align: center; }
 .chart-container { position: relative; height: 280px; width: 100%; }
 .chart-container.tall { height: 320px; }
 .chart-container.pie { height: 300px; max-width: 400px; margin: 0 auto; }
