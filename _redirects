@@ -1,0 +1,13 @@
+# 301 redirects — supported by Cloudflare Pages, Netlify, Vercel
+# Paths are relative to your site root (e.g. truckhub/ if deployed there)
+/semi-truck-financing.html    /vehicles/semi-truck-financing.html    301
+/dump-truck-financing.html    /vehicles/dump-truck-financing.html    301
+/box-truck-financing.html     /vehicles/box-truck-financing.html     301
+/vac-truck-financing.html     /vehicles/vac-truck-financing.html     301
+/tow-truck-financing.html     /vehicles/tow-truck-financing.html     301
+/bucket-truck-financing.html  /vehicles/bucket-truck-financing.html  301
+/service-truck-financing.html /vehicles/service-truck-financing.html 301
+/truck-financing-for-construction-companies.html    /industries/construction-truck-financing.html    301
+/truck-financing-for-utility-contractors.html        /industries/utility-contractor-truck-financing.html    301
+/truck-financing-for-environmental-services.html     /industries/environmental-service-vehicle-financing.html    301
+/fleet-truck-financing.html   /guides/commercial-fleet-financing-guide.html    301

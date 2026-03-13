@@ -1,6 +1,10 @@
 # Add and enhance structured schema markup across the site
+# - Organization on index and get-started
 # - BreadcrumbList on all pages
 # - Article: url, mainEntityOfPage, publisher with logo, datePublished/dateModified where missing
+# - Article added to content pages missing it
+# - FAQPage: ensure pages with faq-item have FAQ schema
+# - HowTo on business-guides (startup guide pages)
 # - Product on comparison pages (both products)
 
 $root = "c:\Users\walla\Desktop\axiant-truck-financing-baseline"
@@ -10,6 +14,8 @@ $utf8NoBom = New-Object System.Text.UTF8Encoding $false
 $breadcrumbCount = 0
 $articleCount = 0
 $productCount = 0
+$organizationCount = 0
+$howToCount = 0
 
 $sectionLabels = @{
     "vehicles" = "Vehicles"
@@ -46,11 +52,13 @@ foreach ($f in $files) {
     $items = @()
     $items += '{"@type":"ListItem","position":1,"name":"Home","item":"' + $baseUrl + '/' + '"}'
     $pos = 2
-    if ($dir -and $sectionLabels[$dir]) {
-        $items += '{"@type":"ListItem","position":' + $pos + ',"name":"' + $sectionLabels[$dir] + '","item":"' + $baseUrl + '/' + $dir + '/' + '"}'
-        $pos++
+    if ($relPath -ne "index.html") {
+        if ($dir -and $sectionLabels[$dir]) {
+            $items += '{"@type":"ListItem","position":' + $pos + ',"name":"' + $sectionLabels[$dir] + '","item":"' + $baseUrl + '/' + $dir + '/' + '"}'
+            $pos++
+        }
+        $items += '{"@type":"ListItem","position":' + $pos + ',"name":"' + $pageTitle + '","item":"' + $pageUrl + '"}'
     }
-    $items += '{"@type":"ListItem","position":' + $pos + ',"name":"' + $pageTitle + '","item":"' + $pageUrl + '"}'
     $bcJson = '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[' + ($items -join ",") + ']}'
 
     # Add BreadcrumbList if missing (or update index which has minimal breadcrumb)
@@ -112,6 +120,30 @@ foreach ($f in $files) {
     $content = $content -replace '"publisher":\s*\{\s*"@type":\s*"Organization",\s*"name":\s*"Axiant Partners"\s*\}', '"publisher":{"@type":"Organization","name":"Axiant Partners","logo":{"@type":"ImageObject","url":"https://axiantpartners.com/favicon.ico"}}'
     $content = $content -replace '"publisher":{"@type":"Organization","name":"Axiant Partners"}', '"publisher":{"@type":"Organization","name":"Axiant Partners","logo":{"@type":"ImageObject","url":"https://axiantpartners.com/favicon.ico"}}'
 
+    # Add Article to content pages missing it (exclude index/collection pages)
+    $isIndexOrCollection = $relPath -match 'index\.html$' -or $content -match '"@type":"CollectionPage"'
+    if (-not $isIndexOrCollection -and $content -notmatch '"@type":"Article"') {
+        $articleUrl = $baseUrl + "/" + $relPath
+        if ($relPath -eq "index.html") { $articleUrl = $baseUrl + "/" }
+        $articleJson = '{"@context":"https://schema.org","@type":"Article","headline":"' + $pageTitle + '","description":"' + $pageTitle + '","author":{"@type":"Organization","name":"Axiant Partners"},"publisher":{"@type":"Organization","name":"Axiant Partners","logo":{"@type":"ImageObject","url":"https://axiantpartners.com/favicon.ico"}},"datePublished":"2025-01-01","dateModified":"2026-03-12","url":"' + $articleUrl + '","mainEntityOfPage":{"@type":"WebPage","@id":"' + $articleUrl + '"}}'
+        $articleScript = "`n  <script type=`"application/ld+json`">`n  $articleJson`n  </script>"
+        $content = $content -replace '</head>', "$articleScript`n</head>"
+        $changed = $true
+        $articleCount++
+    }
+
+    # Add HowTo to business-guides (startup guide pages) missing it
+    if ($relPath -match 'business-guides/how-to-start-.*\.html' -and $content -notmatch '"@type":"HowTo"') {
+        $guideNameRaw = ($pageTitle -replace ' \| .*$', '').Trim()
+        $guideName = Escape-JsonString($guideNameRaw)
+        $desc = Escape-JsonString("Step-by-step guide to " + ($guideNameRaw -replace '^How to Start (a|an) ', ''))
+        $howToJson = '{"@context":"https://schema.org","@type":"HowTo","name":"' + $guideName + '","description":"' + $desc + '","step":[{"@type":"HowToStep","name":"Form Your Business","text":"Register as LLC or corporation. Obtain EIN. Open business bank account."},{"@type":"HowToStep","name":"Obtain Licenses and Permits","text":"CDL, local business license, and industry-specific certifications as required."},{"@type":"HowToStep","name":"Purchase or Finance Equipment","text":"Equipment costs vary by type. Down payment varies by credit. See vehicle financing pages."},{"@type":"HowToStep","name":"Get Insurance","text":"Commercial auto, general liability, workers comp as required."},{"@type":"HowToStep","name":"Find Customers and Contracts","text":"Build relationships with contractors, municipalities, or brokers in your industry."}]}'
+        $howToScript = "`n  <script type=`"application/ld+json`">`n  $howToJson`n  </script>"
+        $content = $content -replace '</head>', "$howToScript`n</head>"
+        $changed = $true
+        $howToCount++
+    }
+
     # Add Product schema to comparison pages
     if ($relPath -match 'comparisons/.*-vs-.*\.html' -and $content -notmatch '"@type":"Product"') {
         $fn = [System.IO.Path]::GetFileNameWithoutExtension($relPath)
@@ -133,4 +165,4 @@ foreach ($f in $files) {
     }
 }
 
-Write-Host "`nDone. Breadcrumbs: $breadcrumbCount, Articles enhanced: $articleCount, Products added: $productCount"
+Write-Host "`nDone. Breadcrumbs: $breadcrumbCount, Articles: $articleCount, HowTo: $howToCount, Products: $productCount"
