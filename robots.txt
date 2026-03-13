@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://axiantpartners.com/truckhub/sitemap.xml
+Sitemap: https://axiantpartners.com/truckhub/sitemap-index.xml

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const MIN_WORDS = 900;
+const MIN_WORDS = 1200;
 const EXCLUDE = new Set(['sitemap.html', '404.html']);
 
 function countWords(html) {
