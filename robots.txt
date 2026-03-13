@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://commercialvehicleguide.com/sitemap.xml
+Sitemap: https://commercialvehicleguide.com/sitemap-guides.xml

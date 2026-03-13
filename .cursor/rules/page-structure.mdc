@@ -1,0 +1,46 @@
+---
+description: Standard page structure for vehicle and business guide pages
+globs: "**/*.html"
+alwaysApply: false
+---
+
+# Page Structure
+
+Pages should follow this order. Include only sections that apply to the page type.
+
+1. **H1 Title**
+2. **Last Updated**
+3. **AI Extractable Answer**
+4. **Definition**
+5. **Key Facts**
+6. **Equipment Data Snapshot Table**
+7. **Overview**
+8. **Licensing Requirements**
+9. **Financing Overview**
+10. **Industry Uses**
+11. **Startup Considerations**
+12. **Step-by-Step Section**
+13. **Comparison Table**
+14. **FAQ**
+15. **Sources**
+
+## Section Notes
+
+- **AI Extractable Answer**: Very short 1–2 sentence answer for AI citation.
+- **Quick Answer**: Slightly longer expansion; no duplicate sentences with AI Extractable.
+- **Key Facts**: Bullet list of essential facts.
+- **Equipment Data Snapshot**: Table with price, terms, industries, license.
+- **Overview**: Main introductory content.
+- **Licensing Requirements**: CDL, DOT, state, OSHA as applicable.
+- **Financing Overview**: Terms, down payment, credit, typical scenarios.
+- **Industry Uses**: Who uses this equipment and for what.
+- **Startup Considerations**: For business guides—costs, timeline, common mistakes.
+- **Step-by-Step Section**: Numbered process overview.
+- **Comparison Table**: Compare to related vehicles or options.
+- **Sources**: Sources and Industry References section.
+
+## Page-Type Exceptions
+
+- **Question pages**: May omit Equipment Data Snapshot, Industry Uses, Startup Considerations.
+- **Index/hub pages**: May use a simplified structure.
+- **Glossary pages**: Definition first, then supporting content.
