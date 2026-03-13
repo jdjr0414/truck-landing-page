@@ -5,7 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE = 'https://axiantpartners.com/truckhub/';
+const BASE = 'https://commercialvehicleguide.com/';
 const SITEMAP_DIR = process.cwd();
 
 function getLastModFromUrl(loc) {

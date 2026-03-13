@@ -8,7 +8,7 @@
 # - Product on comparison pages (both products)
 
 $root = "c:\Users\walla\Desktop\axiant-truck-financing-baseline"
-$baseUrl = "https://axiantpartners.com/truckhub"
+$baseUrl = "https://commercialvehicleguide.com"
 $files = Get-ChildItem -Path $root -Recurse -Filter "*.html" | Where-Object { $_.FullName -notlike "*node_modules*" }
 $utf8NoBom = New-Object System.Text.UTF8Encoding $false
 $breadcrumbCount = 0
@@ -71,7 +71,7 @@ foreach ($f in $files) {
     elseif ($content -match 'BreadcrumbList.*itemListElement.*\[.*\{.*"position":1') {
         # Index has Breadcrumb - replace with full breadcrumb (Home only)
         $oldBc = @'
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://axiantpartners.com/truckhub/"}]}
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commercialvehicleguide.com/"}]}
 '@
         if ($relPath -eq "index.html") {
             $content = $content -replace '\s*<script type="application/ld\+json">\s*\{[^}]*BreadcrumbList[^}]*\}[\s\S]*?</script>', "`n  <script type=`"application/ld+json`">`n  $bcJson`n  </script>"

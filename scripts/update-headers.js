@@ -48,7 +48,7 @@ function getHeaderHtml(base) {
         <a href="${idx}#equipment-costs">Costs</a>
         <a href="${idx}#questions">Licensing</a>
         <a href="${idx}#business-guides">Startup Guides</a>
-        <a href="https://axiantpartners.com/match?ref=truckhub" class="btn btn-sm" target="_blank" rel="noopener">Explore Financing Options</a>
+        <a href="https://axiantpartners.com/match?ref=commercialvehicleguide" class="btn btn-sm" target="_blank" rel="noopener">Explore Financing Options</a>
       </nav>
     </div>
   </header>`;
@@ -111,7 +111,7 @@ for (const { full, rel } of getAllHtmlFiles()) {
         <a href="${idx}#equipment-costs">Costs</a>
         <a href="${gloss}">Glossary</a>
         <a href="${idx}#comparisons">Comparisons</a>
-        <a href="https://axiantpartners.com/match?ref=truckhub" target="_blank" rel="noopener">Explore Financing Options</a>
+        <a href="https://axiantpartners.com/match?ref=commercialvehicleguide" target="_blank" rel="noopener">Explore Financing Options</a>
       </div>
     </div>
   </footer>`;

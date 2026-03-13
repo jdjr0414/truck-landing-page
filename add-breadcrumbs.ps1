@@ -2,7 +2,7 @@
 # Run from project root
 
 $root = "c:\Users\walla\Desktop\axiant-truck-financing-baseline"
-$baseUrl = "https://axiantpartners.com/truckhub"
+$baseUrl = "https://commercialvehicleguide.com"
 $utf8NoBom = New-Object System.Text.UTF8Encoding $false
 
 $sectionLabels = @{

@@ -3,7 +3,7 @@
  * Update CTA button text to softer, informational tone:
  * - "Get Financing" -> "Explore Financing Options"
  * - "Get Matched with Lenders" -> "Compare Financing Options"
- * URLs remain unchanged (axiantpartners.com/match?ref=truckhub)
+ * URLs remain unchanged (axiantpartners.com/match?ref=commercialvehicleguide)
  */
 
 const fs = require('fs');
