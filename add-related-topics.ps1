@@ -1,4 +1,4 @@
-﻿# Add Related Topics section before </main> in HTML files that don't have it
+# Add Related Topics section before </main> in HTML files that don't have it
 $baseDir = "c:\Users\walla\Desktop\axiant-truck-financing-baseline"
 $htmlFiles = Get-ChildItem -Path $baseDir -Recurse -Filter "*.html" | Where-Object {
     $_.Name -ne "index.html" -and
@@ -12,7 +12,7 @@ $sectionRoot = @"
         <h2>Related Topics</h2>
         <div class="table-links">
           <p><strong>Financing:</strong></p>
-          <a href="hubs/commercial-vehicle-financing.html">Commercial Vehicle Financing</a>
+          <a href="hubs/truck-financing-guide.html">Truck Financing Guide</a>
           <a href="hubs/truck-financing-guide.html">Truck Financing Guide</a>
           <p><strong>Startup guides:</strong></p>
           <a href="business-guides/how-to-start-a-dump-truck-business.html">How to Start a Dump Truck Business</a>
@@ -35,7 +35,7 @@ $sectionSub = @"
         <h2>Related Topics</h2>
         <div class="table-links">
           <p><strong>Financing:</strong></p>
-          <a href="../hubs/commercial-vehicle-financing.html">Commercial Vehicle Financing</a>
+          <a href="../hubs/truck-financing-guide.html">Truck Financing Guide</a>
           <a href="../hubs/truck-financing-guide.html">Truck Financing Guide</a>
           <p><strong>Startup guides:</strong></p>
           <a href="../business-guides/how-to-start-a-dump-truck-business.html">How to Start a Dump Truck Business</a>
