@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
- * Update all HTML headers to the new consolidated nav structure.
- * Nav: Vehicles, Industries, Costs, Licensing, Startup Guides, Comparisons, Glossary + Explore Financing Options
+ * Update all HTML headers to simplified nav (less is more).
+ * Nav: Vehicles, Industries, Costs, Licensing, Startup Guides + Explore Financing Options
+ * Comparisons and Glossary moved to footer / related topics.
  */
 
 const fs = require('fs');
@@ -38,18 +39,15 @@ function getBasePath(relPath) {
 
 function getHeaderHtml(base) {
   const idx = base ? `${base}index.html` : 'index.html';
-  const gloss = base ? `${base}glossary/` : 'glossary/';
   return `<header class="site-header">
     <div class="container nav">
-      <a href="${idx}" class="brand">Axiant Partners</a>
+      <a href="${idx}" class="brand">Commercial Vehicle Guide</a>
       <nav>
         <a href="${idx}#vehicles">Vehicles</a>
         <a href="${idx}#industries">Industries</a>
         <a href="${idx}#equipment-costs">Costs</a>
         <a href="${idx}#questions">Licensing</a>
         <a href="${idx}#business-guides">Startup Guides</a>
-        <a href="${idx}#comparisons">Comparisons</a>
-        <a href="${gloss}">Glossary</a>
         <a href="https://axiantpartners.com/match?ref=truckhub" class="btn btn-sm" target="_blank" rel="noopener">Explore Financing Options</a>
       </nav>
     </div>
@@ -97,6 +95,30 @@ for (const { full, rel } of getAllHtmlFiles()) {
   const newHeader = getHeaderHtml(base);
   if (headerRegex.test(html)) {
     html = html.replace(headerRegex, newHeader);
+  }
+
+  // Update footer on internal pages: add Glossary, Comparisons (moved from nav)
+  if (rel !== 'index.html') {
+    const idx = base ? `${base}index.html` : 'index.html';
+    const gloss = base ? `${base}glossary/` : 'glossary/';
+    const newFooter = `<footer class="site-footer">
+    <div class="container footer-row">
+      <p>© 2026 Commercial Vehicle Guide.</p>
+      <div class="footer-links">
+        <a href="${idx}">Home</a>
+        <a href="${idx}#vehicles">Vehicles</a>
+        <a href="${idx}#industries">Industries</a>
+        <a href="${idx}#equipment-costs">Costs</a>
+        <a href="${gloss}">Glossary</a>
+        <a href="${idx}#comparisons">Comparisons</a>
+        <a href="https://axiantpartners.com/match?ref=truckhub" target="_blank" rel="noopener">Explore Financing Options</a>
+      </div>
+    </div>
+  </footer>`;
+    const footerRegex = /<footer class="site-footer">[\s\S]*?<\/footer>/;
+    if (footerRegex.test(html)) {
+      html = html.replace(footerRegex, newFooter);
+    }
   }
 
   // Add hero variant to vehicle, equipment-costs, and business-guides pages
