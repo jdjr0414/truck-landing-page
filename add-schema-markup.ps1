@@ -95,7 +95,7 @@ foreach ($f in $files) {
             $articleCount++
         }
         elseif ($content -match '("author"\s*:\s*\{[^}]+\})\s*\}') {
-            $content = $content -replace '("author"\s*:\s*\{[^}]+\})\s*\}', "`$1,$add`}"
+            $content = $content -replace '("author"\s*:\s*\{[^}]+\})\s*\}', "`$1$add`}"
             $changed = $true
             $articleCount++
         }
