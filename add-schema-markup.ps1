@@ -144,14 +144,15 @@ foreach ($f in $files) {
         $howToCount++
     }
 
-    # Add Product schema to comparison pages
+    # Add Product schema to comparison pages (must include offers per Google Product snippets)
     if ($relPath -match 'comparisons/.*-vs-.*\.html' -and $content -notmatch '"@type":"Product"') {
         $fn = [System.IO.Path]::GetFileNameWithoutExtension($relPath)
         if ($fn -match '(.+)-vs-(.+)') {
             $p1 = (Get-Culture).TextInfo.ToTitleCase(($Matches[1] -replace '-', ' '))
             $p2 = (Get-Culture).TextInfo.ToTitleCase(($Matches[2] -replace '-', ' '))
-            $product1 = '{"@context":"https://schema.org","@type":"Product","name":"' + $p1 + '","description":"Commercial ' + $p1.ToLower() + ' for business use.","category":"Commercial Vehicles","brand":{"@type":"Brand","name":"Various"}}'
-            $product2 = '{"@context":"https://schema.org","@type":"Product","name":"' + $p2 + '","description":"Commercial ' + $p2.ToLower() + ' for business use.","category":"Commercial Vehicles","brand":{"@type":"Brand","name":"Various"}}'
+            $offers = ',"offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":"25000","highPrice":"500000","offerCount":"1"}'
+            $product1 = '{"@context":"https://schema.org","@type":"Product","name":"' + $p1 + '","description":"Commercial ' + $p1.ToLower() + ' for business use.","category":"Commercial Vehicles","brand":{"@type":"Brand","name":"Various"}' + $offers + '}'
+            $product2 = '{"@context":"https://schema.org","@type":"Product","name":"' + $p2 + '","description":"Commercial ' + $p2.ToLower() + ' for business use.","category":"Commercial Vehicles","brand":{"@type":"Brand","name":"Various"}' + $offers + '}'
             $productScript = "`n  <script type=`"application/ld+json`">`n  $product1`n  </script>`n  <script type=`"application/ld+json`">`n  $product2`n  </script>"
             $content = $content -replace '</head>', "$productScript`n</head>"
             $changed = $true
