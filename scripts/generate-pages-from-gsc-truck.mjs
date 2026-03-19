@@ -18,7 +18,11 @@ const GSC_LATEST_ZIP = path.join(GSC_DIR, "latest.zip");
 const OUTPUT_SITEMAP_FRAGMENT_PATH = path.join(repoRoot, "sitemap-guides.xml");
 const OUTPUT_SITEMAP_MAIN_PATH = path.join(repoRoot, "sitemap.xml");
 
-const MAX_TOPICS = 15;
+// We want to create N *new* unique guide pages per run.
+// The GSC "top queries" list can include queries whose target slugs/pages already exist,
+// so we intentionally scan a larger candidate pool and keep going until we create enough new pages.
+const TARGET_NEW_PAGES = 15;
+const MAX_CANDIDATE_QUERIES = 60;
 const MAX_H2_SECTIONS = 6;
 const FAQ_ITEM_COUNT = 4;
 const MIN_GUIDE_WORDS_TARGET = 1400;
@@ -445,7 +449,7 @@ function weightedPositionAverage(recs) {
   return totalWeightedPos / totalImp;
 }
 
-function pickTopQueriesFromGSC(rows) {
+function pickTopQueriesFromGSC(rows, limit = MAX_CANDIDATE_QUERIES) {
   if (!rows.length) return [];
   const headers = rows[0].map((h) => String(h).trim());
   const dataRows = rows.slice(1);
@@ -520,8 +524,8 @@ function pickTopQueriesFromGSC(rows) {
 
   candidates.sort((a, b) => b.score - a.score);
 
-  // Pick up to 15 unique topics
-  return candidates.slice(0, MAX_TOPICS);
+  // Pick up to N best-scoring topics from the GSC export
+  return candidates.slice(0, limit);
 }
 
 function detectIntentKeywords(queryLower) {
@@ -993,9 +997,9 @@ function main() {
   const csvText = fs.readFileSync(queriesCsvPath, "utf8");
   const rows = parseCSV(csvText);
 
-  // 3) pick up to 15 non-brand topics by impressions + position
-  const picked = pickTopQueriesFromGSC(rows);
-  if (!picked.length) {
+  // 3) pick a larger candidate pool (we will still only create up to TARGET_NEW_PAGES)
+  const candidates = pickTopQueriesFromGSC(rows, MAX_CANDIDATE_QUERIES);
+  if (!candidates.length) {
     console.log("No eligible non-brand queries found for generation based on impressions/position filters.");
   }
 
@@ -1012,13 +1016,30 @@ function main() {
   const createdCanonicalUrls = [];
   const insertedCanonicalUrls = [];
 
-  for (const item of picked) {
+  const insertedCanonicalUrlSet = new Set();
+  const seenSlugs = new Set();
+
+  const addInsertedCanonicalUrl = (url) => {
+    if (insertedCanonicalUrlSet.has(url)) return;
+    insertedCanonicalUrlSet.add(url);
+    insertedCanonicalUrls.push(url);
+  };
+
+  for (const item of candidates) {
+    if (plan.created.length >= TARGET_NEW_PAGES) break;
+
     const query = item.query;
     const slug = slugifyFromQuery(query);
     if (!slug) continue;
 
     const canonical = `https://commercialvehicleguide.com/guides/${slug}.html`;
     const outPath = path.join(GUIDES_DIR, `${slug}.html`);
+
+    if (seenSlugs.has(slug)) {
+      plan.skipped.push({ query, slug, canonical, reason: "slug_duplicate" });
+      continue;
+    }
+    seenSlugs.add(slug);
 
     plan.selected.push({
       query,
@@ -1032,7 +1053,7 @@ function main() {
     if (fs.existsSync(outPath)) {
       console.log(`Skip (exists): ${outPath}`);
       plan.skipped.push({ query, slug, canonical, reason: "file_exists" });
-      insertedCanonicalUrls.push(canonical);
+      addInsertedCanonicalUrl(canonical);
       continue;
     }
 
@@ -1087,7 +1108,7 @@ function main() {
     console.log(`Created: ${outPath}`);
     plan.created.push({ query, slug, canonical, path: outPath });
     createdCanonicalUrls.push(canonical);
-    insertedCanonicalUrls.push(canonical);
+    addInsertedCanonicalUrl(canonical);
   }
 
   // Ensure sitemap fragment contains all selected canonical urls (created or skipped)
@@ -1157,7 +1178,9 @@ function main() {
   child_process.execFileSync("node", ["scripts/merge-sitemaps.js"], { cwd: repoRoot, stdio: "inherit" });
 
   // 9) log summary
-  console.log(`\nSummary: selected=${plan.selected.length} created=${plan.created.length} skipped=${plan.skipped.length}`);
+  console.log(
+    `\nSummary: created=${plan.created.length}/${TARGET_NEW_PAGES} selected=${plan.selected.length} skipped=${plan.skipped.length}`
+  );
 }
 
 main();
