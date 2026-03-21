@@ -96,7 +96,78 @@
         </div>
       </div>
     </section>
-  </main>
+      <section class="section" id="apply" style="background: var(--surface, #f8f9fa);">
+  <div class="container">
+    <div class="form-wrap">
+      <h2 style="margin-bottom: 0.5rem;">Get Matched With a Lender</h2>
+      <p style="color: var(--muted, #666); margin-bottom: 1.5rem;">
+        Tell us about your financing need and we'll connect you with 
+        lenders that fit your situation. No commitment required.
+      </p>
+      <form class="referral-form" action="https://formspree.io/f/xbdzbqjw" 
+        method="POST">
+        <div class="form-grid">
+          <div>
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" name="first_name" 
+              required placeholder="First name" />
+          </div>
+          <div>
+            <label for="lname">Last Name *</label>
+            <input type="text" id="lname" name="last_name" 
+              required placeholder="Last name" />
+          </div>
+          <div>
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" 
+              required placeholder="your@email.com" />
+          </div>
+          <div>
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" 
+              required placeholder="(555) 555-5555" />
+          </div>
+          <div>
+            <label for="amount">Financing Amount Needed</label>
+            <select id="amount" name="amount">
+              <option value="" disabled selected>Select range</option>
+              <option>Under $50,000</option>
+              <option>$50,000 – $100,000</option>
+              <option>$100,000 – $250,000</option>
+              <option>$250,000 – $500,000</option>
+              <option>Over $500,000</option>
+            </select>
+          </div>
+          <div>
+            <label for="credit">Credit Score Range</label>
+            <select id="credit" name="credit_score">
+              <option value="" disabled selected>Select range</option>
+              <option>700+</option>
+              <option>650 – 699</option>
+              <option>600 – 649</option>
+              <option>550 – 599</option>
+              <option>Below 550</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top: 1rem;">
+          <label for="message">Tell us about the equipment or 
+            financing need</label>
+          <textarea id="message" name="message" rows="4" 
+            placeholder="Equipment type, how it will be used, any previous declines, etc."></textarea>
+        </div>
+        <div class="form-actions" style="margin-top: 1.25rem;">
+          <button type="submit" class="btn">Get Matched Now</button>
+          <p class="form-note">We respond within 1 business day. 
+            No hard credit pull to get started.</p>
+        </div>
+        <input type="hidden" name="_source" 
+          value="commercialvehicleguide" />
+      </form>
+    </div>
+  </div>
+</section>
+</main>
   <footer class="site-footer">
     <div class="container footer-row">
       <p>© 2026 Commercial Vehicle Guide.</p>
@@ -110,7 +181,8 @@
       </div>
     </div>
   </footer>
-  <script src="/scripts/mobile-nav.js" defer></script>
+  <script src="../scripts/mobile-nav.js" defer></script>
+  <script src="../script.js" defer></script>
 </body>
 </html>
 

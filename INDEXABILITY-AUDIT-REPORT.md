@@ -90,6 +90,8 @@ These pages meet indexable standards (unique title, meta, H1, AI Extractable Ans
 - [x] Add sitemap.xml
 - [x] Update internal links in root baseline pages to point to vehicles/ and industries/
 
+**March 2026 follow-up (repo):** Root-level HTML stubs were added for legacy URLs (`semi-truck-financing.html`, `dump-truck-financing.html`, `box-truck-financing.html`, `vac-truck-financing.html`, `tow-truck-financing.html`, `bucket-truck-financing.html`, `service-truck-financing.html`, `truck-financing-for-construction-companies.html`, `truck-financing-for-utility-contractors.html`, `truck-financing-for-environmental-services.html`) with `<link rel="canonical">` pointing to the matching `vehicles/` or `industries/` pages. **`fleet-truck-financing.html`** uses a unique meta description (not “Baseline”) and self-canonical. **`sitemap-index.xml`** lists all eight fragment sitemaps (same set as `scripts/merge-sitemaps.js`); **`robots.txt`** references `sitemap-index.xml` for discoverability.
+
 ### Quality Threshold (Phase 2)
 - [x] **Remove weak pages; use 301 redirects only:** Root vehicle pages and truck-financing-for-* deleted. Server-side 301 redirects in `_redirects` (Cloudflare Pages). No meta refresh, no redirect HTML files.
 - [x] **Index link update:** index.html now links directly to guides/commercial-fleet-financing-guide.html
