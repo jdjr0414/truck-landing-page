@@ -1,0 +1,15 @@
+# Apache (cPanel, LAMP). Remove or ignore if you use Netlify/Cloudflare-only redirects.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Apex canonical (non-www) — matches site canonicals
+  RewriteCond %{HTTP_HOST} ^www\.commercialvehicleguide\.com$ [NC]
+  RewriteRule ^ https://commercialvehicleguide.com%{REQUEST_URI} [L,R=301]
+
+  # Extensionless → canonical .html
+  RewriteRule ^questions/dot-number-for-trucking-business$ /questions/dot-number-for-trucking-business.html [L,R=301]
+</IfModule>

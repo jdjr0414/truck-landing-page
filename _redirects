@@ -1,5 +1,15 @@
-# 301 redirects — supported by Cloudflare Pages, Netlify, Vercel
-# Paths are relative to your site root (e.g. truckhub/ if deployed there)
+# Supported by Netlify, Cloudflare Pages, and many static hosts.
+# Order: host/canonical fixes first, then path aliases.
+
+# Canonical host: https://commercialvehicleguide.com (no www)
+http://commercialvehicleguide.com/*       https://commercialvehicleguide.com/:splat       301!
+http://www.commercialvehicleguide.com/*  https://commercialvehicleguide.com/:splat       301!
+https://www.commercialvehicleguide.com/* https://commercialvehicleguide.com/:splat       301!
+
+# Extensionless URLs → canonical .html (avoids duplicate URLs in Search Console)
+/questions/dot-number-for-trucking-business    /questions/dot-number-for-trucking-business.html    301
+
+# Legacy / mistyped paths → current URLs
 /semi-truck-financing.html    /vehicles/semi-truck-financing.html    301
 /dump-truck-financing.html    /vehicles/dump-truck-financing.html    301
 /box-truck-financing.html     /vehicles/box-truck-financing.html     301
