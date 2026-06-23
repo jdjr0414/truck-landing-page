@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Truck Financing Calculator | Estimate Your Commercial Truck Payment</title>
+  <meta name="description" content="Free commercial truck financing calculator. Enter the truck price, down payment, rate, and term to estimate your monthly payment, total interest, and total cost — for semis, box trucks, dump trucks, and owner-operators." />
+  <link rel="canonical" href="https://commercialvehicleguide.com/truck-financing-calculator.html" />
+  <meta property="og:title" content="Truck Financing Calculator — Estimate Your Commercial Truck Payment" />
+  <meta property="og:description" content="Estimate your monthly commercial truck payment, total interest, and total cost from price, down payment, rate, and term." />
+  <meta property="og:url" content="https://commercialvehicleguide.com/truck-financing-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta name="last-modified" content="2026-06-23" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo-multi-vehicles.png" type="image/png">
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Truck Financing Calculator","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Estimate the monthly payment, total interest, and total cost of a commercial truck loan from price, down payment, interest rate, and term.","url":"https://commercialvehicleguide.com/truck-financing-calculator.html","publisher":{"@type":"Organization","name":"Commercial Vehicle Guide"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commercialvehicleguide.com/"},{"@type":"ListItem","position":2,"name":"Truck Financing Calculator","item":"https://commercialvehicleguide.com/truck-financing-calculator.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How much does it cost to finance a commercial truck?","acceptedAnswer":{"@type":"Answer","text":"Your monthly payment depends on the truck price, down payment, interest rate, and term. For example, financing $120,000 over 60 months at 8.5% with $15,000 down is about $2,154 per month. Use the calculator to estimate your own payment and total interest."}},
+    {"@type":"Question","name":"What interest rate can I expect on a truck loan?","acceptedAnswer":{"@type":"Answer","text":"Commercial truck loan rates commonly run from about 6% to 18% depending on credit, time in business, the age of the truck, and the down payment. Established carriers with strong credit get the lowest rates; first-time owner-operators and older trucks see higher rates."}},
+    {"@type":"Question","name":"How much down payment do I need for a semi truck?","acceptedAnswer":{"@type":"Answer","text":"Down payments typically range from 0% to 25%. Established fleets with strong credit may qualify for 0–10% down, while first-time owner-operators or used trucks often need 10–25%. A larger down payment lowers your monthly payment and total interest."}},
+    {"@type":"Question","name":"What loan term is best for a truck?","acceptedAnswer":{"@type":"Answer","text":"Commercial truck loans usually run 36 to 72 months. A longer term lowers the monthly payment but increases total interest; a shorter term costs less overall but raises the monthly payment. Match the term to how long you plan to keep the truck."}}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand"><img src="assets/logo-multi-vehicles.png" alt="Commercial Vehicle Guide" class="brand-logo" onerror="this.style.display='none';this.nextElementSibling.classList.add('brand-text-visible')"><span class="brand-text">Commercial Vehicle Guide</span></a>
+      <nav>
+        <a href="index.html#vehicles">Vehicles</a>
+        <a href="index.html#industries">Industries</a>
+        <a href="index.html#equipment-costs">Costs</a>
+        <a href="index.html#questions">Licensing</a>
+        <a href="index.html#business-guides">Startup Guides</a>
+        <a href="https://axiantpartners.com/match?ref=commercialvehicleguide" class="btn btn-sm" target="_blank" rel="noopener">Explore Financing Options</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <div class="container">
+        <a href="index.html">Home</a> <span aria-hidden="true">&#8250;</span> <span aria-current="page">Truck Financing Calculator</span>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <p class="tfc-eyebrow">Free Tool</p>
+        <h1>Truck Financing Calculator</h1>
+        <p class="tfc-lede">Estimate the monthly payment on a commercial truck — semi, box truck, dump truck, or any rig. Enter the price, your down payment, rate, and term to see your payment, total interest, and total cost.</p>
+
+        <div class="tfc-card">
+          <form id="tfcForm" class="tfc-grid" novalidate>
+            <div class="tfc-field">
+              <label for="price">Truck price ($)</label>
+              <input type="text" id="price" inputmode="decimal" value="120,000" placeholder="e.g., 120,000" />
+            </div>
+            <div class="tfc-field">
+              <label for="down">Down payment ($)</label>
+              <input type="text" id="down" inputmode="decimal" value="15,000" placeholder="e.g., 15,000 or 0" />
+            </div>
+            <div class="tfc-field">
+              <label for="rate">Interest rate (%)</label>
+              <input type="number" id="rate" step="0.01" min="0" max="40" value="8.5" placeholder="e.g., 8.5" />
+              <small>Commercial truck rates often run 6%–18%.</small>
+            </div>
+            <div class="tfc-field">
+              <label for="term">Term (months)</label>
+              <input type="number" id="term" step="1" min="1" max="120" value="60" placeholder="e.g., 60" />
+              <small>Most truck loans run 36–72 months.</small>
+            </div>
+            <div class="tfc-field tfc-field-full">
+              <button type="submit" class="btn tfc-btn">Calculate Payment</button>
+            </div>
+          </form>
+          <p class="tfc-error" id="tfcError" role="alert"></p>
+
+          <div class="tfc-results" id="tfcResults" aria-live="polite">
+            <div class="tfc-headline">
+              <div class="tfc-total-label">Estimated monthly payment</div>
+              <div class="tfc-total" id="tfcMonthly">—</div>
+            </div>
+            <div class="tfc-rows">
+              <div class="tfc-row"><span>Amount financed</span><span id="tfcFinanced">—</span></div>
+              <div class="tfc-row"><span>Total of payments</span><span id="tfcTotal">—</span></div>
+              <div class="tfc-row"><span>Total interest</span><span id="tfcInterest">—</span></div>
+            </div>
+            <div class="tfc-cta-inline">
+              <p>Ready to get matched with truck lenders?</p>
+              <a href="https://axiantpartners.com/match?ref=commercialvehicleguide" class="btn" target="_blank" rel="noopener">Explore Financing Options →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-alt, #ebe7de);">
+      <div class="container">
+        <h2>How the truck financing calculator works</h2>
+        <p>It uses standard loan amortization — the same math a lender uses:</p>
+        <ul class="tfc-list">
+          <li><strong>Amount financed</strong> = truck price − down payment.</li>
+          <li><strong>Monthly payment</strong> is calculated from the amount financed, the interest rate, and the number of months.</li>
+          <li><strong>Total interest</strong> = total of all payments − amount financed.</li>
+        </ul>
+        <p>A bigger down payment or a shorter term lowers your total interest; a longer term lowers the monthly payment but costs more overall. Rates vary with credit, time in business, and the age of the truck — newer trucks and stronger credit earn the lowest rates.</p>
+        <h2>What affects your truck loan</h2>
+        <p>Lenders price commercial truck loans on the truck (year, mileage, type), your credit and time in business, and your down payment. Owner-operators just starting out typically see higher rates and larger down payments than established fleets. Financing the right truck on terms that fit your revenue keeps the payment manageable between loads.</p>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="container">
+        <h2>Truck financing questions</h2>
+        <div class="tfc-faq">
+          <div class="tfc-faq-item"><h3>How much does it cost to finance a commercial truck?</h3><p>Your payment depends on price, down payment, rate, and term. Financing $120,000 over 60 months at 8.5% with $15,000 down is about $2,154/month. Use the calculator for your own numbers.</p></div>
+          <div class="tfc-faq-item"><h3>What rate can I expect?</h3><p>Commercial truck rates commonly run 6%–18%, depending on credit, time in business, truck age, and down payment.</p></div>
+          <div class="tfc-faq-item"><h3>How much down payment do I need?</h3><p>Typically 0%–25%. Established fleets may qualify for 0–10% down; first-time owner-operators or used trucks often need 10–25%.</p></div>
+          <div class="tfc-faq-item"><h3>What term is best?</h3><p>Usually 36–72 months. Longer terms lower the monthly payment but raise total interest. Match the term to how long you'll keep the truck.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apply" style="text-align:center;">
+      <div class="container">
+        <h2>See your real numbers</h2>
+        <p style="color: var(--muted, #5c574d); max-width: 56ch; margin: 0 auto 1.25rem;">Get matched with lenders that finance commercial trucks and owner-operators — no commitment.</p>
+        <a href="https://axiantpartners.com/match?ref=commercialvehicleguide" class="btn" target="_blank" rel="noopener">Explore Financing Options</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© 2026 Commercial Vehicle Guide.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="https://axiantpartners.com/match?ref=commercialvehicleguide" target="_blank" rel="noopener">Explore Financing Options</a>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .tfc-eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent,#c45d0a);margin-bottom:.5rem}
+    .tfc-lede{color:var(--muted,#5c574d);max-width:64ch;font-size:1.05rem;margin-bottom:0}
+    .tfc-card{background:var(--panel,#fff);border:1px solid var(--line,#d4cfc4);border-radius:14px;padding:26px;margin-top:24px;box-shadow:0 16px 40px -22px rgba(26,24,20,.4)}
+    .tfc-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media(max-width:640px){.tfc-grid{grid-template-columns:1fr}}
+    .tfc-field label{display:block;font-weight:600;font-size:.92rem;color:var(--text,#1a1814);margin-bottom:6px}
+    .tfc-field input{width:100%;min-height:48px;padding:11px 13px;border:1.5px solid var(--line,#d4cfc4);border-radius:9px;font-size:1rem;color:var(--text,#1a1814);background:var(--bg,#f5f3ed)}
+    .tfc-field input:focus{outline:none;border-color:var(--accent,#c45d0a)}
+    .tfc-field small{display:block;color:var(--muted,#5c574d);font-size:.8rem;margin-top:5px}
+    .tfc-field-full{grid-column:1/-1}
+    .tfc-btn{width:100%;min-height:52px;font-size:1.05rem}
+    .tfc-error{color:#b91c1c;font-weight:600;margin:12px 0 0;min-height:1.2em}
+    .tfc-results{display:none;margin-top:24px}
+    .tfc-results.show{display:block}
+    .tfc-headline{background:var(--dark,#1a1814);color:#fff;border-radius:11px;padding:24px;text-align:center}
+    .tfc-total-label{font-size:.92rem;opacity:.82}
+    .tfc-total{font-size:2.8rem;font-weight:800;color:var(--accent,#c45d0a);line-height:1.1;margin-top:4px}
+    .tfc-rows{margin-top:16px;border:1px solid var(--line,#d4cfc4);border-radius:11px;overflow:hidden}
+    .tfc-row{display:flex;justify-content:space-between;gap:14px;padding:12px 18px;border-bottom:1px solid var(--line,#d4cfc4);font-size:.96rem;color:var(--text,#1a1814)}
+    .tfc-row:last-child{border-bottom:0}
+    .tfc-row span:last-child{font-weight:700}
+    .tfc-cta-inline{margin-top:20px;text-align:center}
+    .tfc-cta-inline p{color:var(--muted,#5c574d);margin-bottom:12px}
+    .tfc-list{margin:0 0 1rem 1.25rem}.tfc-list li{margin-bottom:.4rem}
+    .tfc-faq{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:640px){.tfc-faq{grid-template-columns:1fr}}
+    .tfc-faq-item h3{font-size:1.02rem;margin-bottom:.35rem;color:var(--text,#1a1814)}
+    .tfc-faq-item p{color:var(--muted,#5c574d);margin:0}
+  </style>
+
+  <script src="./scripts/mobile-nav.js" defer></script>
+  <script src="./script.js" defer></script>
+  <script>
+    (function(){
+      var $ = function(id){ return document.getElementById(id); };
+      var num = function(v){ return parseFloat(String(v).replace(/[^0-9.\-]/g,'')) || 0; };
+      var usd = function(n){ return '$' + Math.round(n).toLocaleString('en-US'); };
+      function payment(P, annualRatePct, months){
+        var r=(annualRatePct/100)/12;
+        if(months<=0) return 0;
+        return r>0 ? P*r/(1-Math.pow(1+r,-months)) : P/months;
+      }
+      function calc(e){
+        if(e) e.preventDefault();
+        var err = $('tfcError'); err.textContent = '';
+        var price = num($('price').value);
+        var down = num($('down').value);
+        var rate = num($('rate').value);
+        var term = num($('term').value);
+        if(price <= 0){ err.textContent = 'Enter the truck price.'; return; }
+        if(term <= 0){ err.textContent = 'Enter the loan term in months.'; return; }
+        var financed = Math.max(0, price - down);
+        if(financed <= 0){ err.textContent = 'Your down payment covers the full price — no financing needed.'; return; }
+        var monthly = payment(financed, rate, term);
+        var total = monthly * term;
+        var interest = total - financed;
+        $('tfcMonthly').textContent = usd(monthly);
+        $('tfcFinanced').textContent = usd(financed);
+        $('tfcTotal').textContent = usd(total);
+        $('tfcInterest').textContent = usd(interest);
+        $('tfcResults').classList.add('show');
+      }
+      var f = $('tfcForm');
+      if(f){ f.addEventListener('submit', calc); calc(); }
+    })();
+  </script>
+</body>
+</html>
