@@ -1,10 +1,10 @@
-# Supported by Netlify, Cloudflare Pages, and many static hosts.
-# Order: host/canonical fixes first, then path aliases.
-
-# Canonical host: https://commercialvehicleguide.com (no www)
-http://commercialvehicleguide.com/*       https://commercialvehicleguide.com/:splat       301!
-http://www.commercialvehicleguide.com/*  https://commercialvehicleguide.com/:splat       301!
-https://www.commercialvehicleguide.com/* https://commercialvehicleguide.com/:splat       301!
+# Cloudflare Workers/Pages static assets — path aliases only.
+#
+# Host canonicalization (http->https and www->apex) is handled in Cloudflare settings
+# (Always Use HTTPS + a www->apex Redirect Rule), NOT here. Cloudflare's _redirects
+# requires RELATIVE destinations and rejects the Netlify-style "301!" force flag —
+# the removed absolute-URL lines are what failed the deploy with
+# "Invalid _redirects configuration".
 
 # Extensionless URLs → canonical .html (avoids duplicate URLs in Search Console)
 /questions/dot-number-for-trucking-business    /questions/dot-number-for-trucking-business.html    301
