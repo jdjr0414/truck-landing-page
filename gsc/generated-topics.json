@@ -1,0 +1,664 @@
+{
+  "runDate": "2026-03-19",
+  "sourceZip": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\gsc\\commercialvehicleguide.com-Performance-on-Search-2026-03-19.zip",
+  "selected": [
+    {
+      "query": "rollback vs wrecker",
+      "impressions": 5,
+      "avgPosition": 11.8,
+      "score": 4.861111111111112,
+      "slug": "rollback-vs-wrecker",
+      "canonical": "https://commercialvehicleguide.com/guides/rollback-vs-wrecker.html"
+    },
+    {
+      "query": "what is a vocational truck",
+      "impressions": 3,
+      "avgPosition": 8.67,
+      "score": 2.032913843175218,
+      "slug": "what-is-a-vocational-truck",
+      "canonical": "https://commercialvehicleguide.com/guides/what-is-a-vocational-truck.html"
+    },
+    {
+      "query": "vacuum truck business",
+      "impressions": 2,
+      "avgPosition": 12,
+      "score": 2,
+      "slug": "vacuum-truck-business",
+      "canonical": "https://commercialvehicleguide.com/guides/vacuum-truck-business.html"
+    },
+    {
+      "query": "used truck financing",
+      "impressions": 6,
+      "avgPosition": 40.33,
+      "score": 1.1887913954146616,
+      "slug": "used-truck-financing",
+      "canonical": "https://commercialvehicleguide.com/guides/used-truck-financing.html"
+    },
+    {
+      "query": "what are vocational trucks",
+      "impressions": 2,
+      "avgPosition": 6,
+      "score": 1.0769230769230769,
+      "slug": "what-are-vocational-trucks",
+      "canonical": "https://commercialvehicleguide.com/guides/what-are-vocational-trucks.html"
+    },
+    {
+      "query": "dot inspection checklist",
+      "impressions": 4,
+      "avgPosition": 37.75,
+      "score": 0.8549618320610687,
+      "slug": "dot-inspection-checklist",
+      "canonical": "https://commercialvehicleguide.com/guides/dot-inspection-checklist.html"
+    },
+    {
+      "query": "how to start a trucking company",
+      "impressions": 6,
+      "avgPosition": 56,
+      "score": 0.823529411764706,
+      "slug": "how-to-start-a-trucking-company",
+      "canonical": "https://commercialvehicleguide.com/guides/how-to-start-a-trucking-company.html"
+    },
+    {
+      "query": "how to start a flatbed trucking business",
+      "impressions": 1,
+      "avgPosition": 10,
+      "score": 0.7777777777777779,
+      "slug": "how-to-start-a-flatbed-trucking-business",
+      "canonical": "https://commercialvehicleguide.com/guides/how-to-start-a-flatbed-trucking-business.html"
+    },
+    {
+      "query": "vocational truck meaning",
+      "impressions": 1,
+      "avgPosition": 10,
+      "score": 0.7777777777777779,
+      "slug": "vocational-truck-meaning",
+      "canonical": "https://commercialvehicleguide.com/guides/vocational-truck-meaning.html"
+    },
+    {
+      "query": "lease purchase",
+      "impressions": 4,
+      "avgPosition": 42.5,
+      "score": 0.7466666666666667,
+      "slug": "lease-purchase",
+      "canonical": "https://commercialvehicleguide.com/guides/lease-purchase.html"
+    },
+    {
+      "query": "truck dot inspection checklist",
+      "impressions": 4,
+      "avgPosition": 45.25,
+      "score": 0.6956521739130435,
+      "slug": "truck-dot-inspection-checklist",
+      "canonical": "https://commercialvehicleguide.com/guides/truck-dot-inspection-checklist.html"
+    },
+    {
+      "query": "wrecker vs rollback",
+      "impressions": 1,
+      "avgPosition": 8,
+      "score": 0.6363636363636364,
+      "slug": "wrecker-vs-rollback",
+      "canonical": "https://commercialvehicleguide.com/guides/wrecker-vs-rollback.html"
+    },
+    {
+      "query": "vocational truck",
+      "impressions": 2,
+      "avgPosition": 29,
+      "score": 0.5833333333333334,
+      "slug": "vocational-truck",
+      "canonical": "https://commercialvehicleguide.com/guides/vocational-truck.html"
+    },
+    {
+      "query": "bucket truck financing",
+      "impressions": 1,
+      "avgPosition": 21,
+      "score": 0.4375,
+      "slug": "bucket-truck-financing",
+      "canonical": "https://commercialvehicleguide.com/guides/bucket-truck-financing.html"
+    },
+    {
+      "query": "starting a trucking company",
+      "impressions": 3,
+      "avgPosition": 55,
+      "score": 0.41999999999999993,
+      "slug": "starting-a-trucking-company",
+      "canonical": "https://commercialvehicleguide.com/guides/starting-a-trucking-company.html"
+    },
+    {
+      "query": "how do i start a trucking company",
+      "impressions": 3,
+      "avgPosition": 59.330000000000005,
+      "score": 0.3865267807840972,
+      "slug": "how-do-i-start-a-trucking-company",
+      "canonical": "https://commercialvehicleguide.com/guides/how-do-i-start-a-trucking-company.html"
+    },
+    {
+      "query": "how to start a trucking business",
+      "impressions": 3,
+      "avgPosition": 60.330000000000005,
+      "score": 0.37954093620097595,
+      "slug": "how-to-start-a-trucking-business",
+      "canonical": "https://commercialvehicleguide.com/guides/how-to-start-a-trucking-business.html"
+    },
+    {
+      "query": "best rollback tow truck",
+      "impressions": 1,
+      "avgPosition": 28,
+      "score": 0.30434782608695654,
+      "slug": "best-rollback-tow-truck",
+      "canonical": "https://commercialvehicleguide.com/guides/best-rollback-tow-truck.html"
+    },
+    {
+      "query": "sleeper truck financing",
+      "impressions": 1,
+      "avgPosition": 28,
+      "score": 0.30434782608695654,
+      "slug": "sleeper-truck-financing",
+      "canonical": "https://commercialvehicleguide.com/guides/sleeper-truck-financing.html"
+    },
+    {
+      "query": "dot truck inspection checklist",
+      "impressions": 2,
+      "avgPosition": 52.5,
+      "score": 0.2947368421052632,
+      "slug": "dot-truck-inspection-checklist",
+      "canonical": "https://commercialvehicleguide.com/guides/dot-truck-inspection-checklist.html"
+    },
+    {
+      "query": "how to start a fleet service business",
+      "impressions": 2,
+      "avgPosition": 59,
+      "score": 0.25925925925925924,
+      "slug": "how-to-start-a-fleet-service-business",
+      "canonical": "https://commercialvehicleguide.com/guides/how-to-start-a-fleet-service-business.html"
+    },
+    {
+      "query": "rollback tow truck financing",
+      "impressions": 1,
+      "avgPosition": 33,
+      "score": 0.25,
+      "slug": "rollback-tow-truck-financing",
+      "canonical": "https://commercialvehicleguide.com/guides/rollback-tow-truck-financing.html"
+    },
+    {
+      "query": "refrigerated freight requirements",
+      "impressions": 2,
+      "avgPosition": 64.5,
+      "score": 0.23529411764705882,
+      "slug": "refrigerated-freight-requirements",
+      "canonical": "https://commercialvehicleguide.com/guides/refrigerated-freight-requirements.html"
+    },
+    {
+      "query": "semi truck financing for new owner operators",
+      "impressions": 2,
+      "avgPosition": 68.5,
+      "score": 0.2204724409448819,
+      "slug": "semi-truck-financing-for-new-owner-operators",
+      "canonical": "https://commercialvehicleguide.com/guides/semi-truck-financing-for-new-owner-operators.html"
+    },
+    {
+      "query": "vocational trucks",
+      "impressions": 1,
+      "avgPosition": 40,
+      "score": 0.2,
+      "slug": "vocational-trucks",
+      "canonical": "https://commercialvehicleguide.com/guides/vocational-trucks.html"
+    },
+    {
+      "query": "lease purchase is",
+      "impressions": 2,
+      "avgPosition": 75.5,
+      "score": 0.19858156028368795,
+      "slug": "lease-purchase-is",
+      "canonical": "https://commercialvehicleguide.com/guides/lease-purchase-is.html"
+    },
+    {
+      "query": "how to finance a semi truck",
+      "impressions": 2,
+      "avgPosition": 83.5,
+      "score": 0.178343949044586,
+      "slug": "how-to-finance-a-semi-truck",
+      "canonical": "https://commercialvehicleguide.com/guides/how-to-finance-a-semi-truck.html"
+    },
+    {
+      "query": "telecom truck",
+      "impressions": 1,
+      "avgPosition": 47,
+      "score": 0.16666666666666666,
+      "slug": "telecom-truck",
+      "canonical": "https://commercialvehicleguide.com/guides/telecom-truck.html"
+    },
+    {
+      "query": "rollback towing",
+      "impressions": 1,
+      "avgPosition": 49,
+      "score": 0.1590909090909091,
+      "slug": "rollback-towing",
+      "canonical": "https://commercialvehicleguide.com/guides/rollback-towing.html"
+    },
+    {
+      "query": "start a truck company",
+      "impressions": 1,
+      "avgPosition": 49,
+      "score": 0.1590909090909091,
+      "slug": "start-a-truck-company",
+      "canonical": "https://commercialvehicleguide.com/guides/start-a-truck-company.html"
+    },
+    {
+      "query": "starting trucking company",
+      "impressions": 1,
+      "avgPosition": 50,
+      "score": 0.15555555555555556,
+      "slug": "starting-trucking-company",
+      "canonical": "https://commercialvehicleguide.com/guides/starting-trucking-company.html"
+    },
+    {
+      "query": "lease purchase program",
+      "impressions": 1,
+      "avgPosition": 58,
+      "score": 0.1320754716981132,
+      "slug": "lease-purchase-program",
+      "canonical": "https://commercialvehicleguide.com/guides/lease-purchase-program.html"
+    },
+    {
+      "query": "wrecker vs tow truck",
+      "impressions": 1,
+      "avgPosition": 58,
+      "score": 0.1320754716981132,
+      "slug": "wrecker-vs-tow-truck",
+      "canonical": "https://commercialvehicleguide.com/guides/wrecker-vs-tow-truck.html"
+    },
+    {
+      "query": "\"equipment financing\"",
+      "impressions": 1,
+      "avgPosition": 65,
+      "score": 0.11666666666666667,
+      "slug": "equipment-financing",
+      "canonical": "https://commercialvehicleguide.com/guides/equipment-financing.html"
+    },
+    {
+      "query": "starting your own trucking company",
+      "impressions": 1,
+      "avgPosition": 66,
+      "score": 0.11475409836065573,
+      "slug": "starting-your-own-trucking-company",
+      "canonical": "https://commercialvehicleguide.com/guides/starting-your-own-trucking-company.html"
+    },
+    {
+      "query": "tow truck rollback",
+      "impressions": 1,
+      "avgPosition": 66,
+      "score": 0.11475409836065573,
+      "slug": "tow-truck-rollback",
+      "canonical": "https://commercialvehicleguide.com/guides/tow-truck-rollback.html"
+    }
+  ],
+  "created": [
+    {
+      "query": "sleeper truck financing",
+      "slug": "sleeper-truck-financing",
+      "canonical": "https://commercialvehicleguide.com/guides/sleeper-truck-financing.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\sleeper-truck-financing.html"
+    },
+    {
+      "query": "dot truck inspection checklist",
+      "slug": "dot-truck-inspection-checklist",
+      "canonical": "https://commercialvehicleguide.com/guides/dot-truck-inspection-checklist.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\dot-truck-inspection-checklist.html"
+    },
+    {
+      "query": "how to start a fleet service business",
+      "slug": "how-to-start-a-fleet-service-business",
+      "canonical": "https://commercialvehicleguide.com/guides/how-to-start-a-fleet-service-business.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\how-to-start-a-fleet-service-business.html"
+    },
+    {
+      "query": "rollback tow truck financing",
+      "slug": "rollback-tow-truck-financing",
+      "canonical": "https://commercialvehicleguide.com/guides/rollback-tow-truck-financing.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\rollback-tow-truck-financing.html"
+    },
+    {
+      "query": "refrigerated freight requirements",
+      "slug": "refrigerated-freight-requirements",
+      "canonical": "https://commercialvehicleguide.com/guides/refrigerated-freight-requirements.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\refrigerated-freight-requirements.html"
+    },
+    {
+      "query": "semi truck financing for new owner operators",
+      "slug": "semi-truck-financing-for-new-owner-operators",
+      "canonical": "https://commercialvehicleguide.com/guides/semi-truck-financing-for-new-owner-operators.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\semi-truck-financing-for-new-owner-operators.html"
+    },
+    {
+      "query": "lease purchase is",
+      "slug": "lease-purchase-is",
+      "canonical": "https://commercialvehicleguide.com/guides/lease-purchase-is.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\lease-purchase-is.html"
+    },
+    {
+      "query": "how to finance a semi truck",
+      "slug": "how-to-finance-a-semi-truck",
+      "canonical": "https://commercialvehicleguide.com/guides/how-to-finance-a-semi-truck.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\how-to-finance-a-semi-truck.html"
+    },
+    {
+      "query": "telecom truck",
+      "slug": "telecom-truck",
+      "canonical": "https://commercialvehicleguide.com/guides/telecom-truck.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\telecom-truck.html"
+    },
+    {
+      "query": "start a truck company",
+      "slug": "start-a-truck-company",
+      "canonical": "https://commercialvehicleguide.com/guides/start-a-truck-company.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\start-a-truck-company.html"
+    },
+    {
+      "query": "starting trucking company",
+      "slug": "starting-trucking-company",
+      "canonical": "https://commercialvehicleguide.com/guides/starting-trucking-company.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\starting-trucking-company.html"
+    },
+    {
+      "query": "wrecker vs tow truck",
+      "slug": "wrecker-vs-tow-truck",
+      "canonical": "https://commercialvehicleguide.com/guides/wrecker-vs-tow-truck.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\wrecker-vs-tow-truck.html"
+    },
+    {
+      "query": "\"equipment financing\"",
+      "slug": "equipment-financing",
+      "canonical": "https://commercialvehicleguide.com/guides/equipment-financing.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\equipment-financing.html"
+    },
+    {
+      "query": "starting your own trucking company",
+      "slug": "starting-your-own-trucking-company",
+      "canonical": "https://commercialvehicleguide.com/guides/starting-your-own-trucking-company.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\starting-your-own-trucking-company.html"
+    },
+    {
+      "query": "tow truck rollback",
+      "slug": "tow-truck-rollback",
+      "canonical": "https://commercialvehicleguide.com/guides/tow-truck-rollback.html",
+      "path": "C:\\Users\\walla\\Desktop\\axiant-truck-financing-baseline\\guides\\tow-truck-rollback.html"
+    }
+  ],
+  "skipped": [
+    {
+      "query": "rollback vs wrecker",
+      "slug": "rollback-vs-wrecker",
+      "canonical": "https://commercialvehicleguide.com/guides/rollback-vs-wrecker.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "what is a vocational truck",
+      "slug": "what-is-a-vocational-truck",
+      "canonical": "https://commercialvehicleguide.com/guides/what-is-a-vocational-truck.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "vacuum truck business",
+      "slug": "vacuum-truck-business",
+      "canonical": "https://commercialvehicleguide.com/guides/vacuum-truck-business.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "used truck financing",
+      "slug": "used-truck-financing",
+      "canonical": "https://commercialvehicleguide.com/guides/used-truck-financing.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "what are vocational trucks",
+      "slug": "what-are-vocational-trucks",
+      "canonical": "https://commercialvehicleguide.com/guides/what-are-vocational-trucks.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "dot inspection checklist",
+      "slug": "dot-inspection-checklist",
+      "canonical": "https://commercialvehicleguide.com/guides/dot-inspection-checklist.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "how to start a trucking company",
+      "slug": "how-to-start-a-trucking-company",
+      "canonical": "https://commercialvehicleguide.com/guides/how-to-start-a-trucking-company.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "how to start a flatbed trucking business",
+      "slug": "how-to-start-a-flatbed-trucking-business",
+      "canonical": "https://commercialvehicleguide.com/guides/how-to-start-a-flatbed-trucking-business.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "vocational truck meaning",
+      "slug": "vocational-truck-meaning",
+      "canonical": "https://commercialvehicleguide.com/guides/vocational-truck-meaning.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "lease purchase",
+      "slug": "lease-purchase",
+      "canonical": "https://commercialvehicleguide.com/guides/lease-purchase.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "truck dot inspection checklist",
+      "slug": "truck-dot-inspection-checklist",
+      "canonical": "https://commercialvehicleguide.com/guides/truck-dot-inspection-checklist.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "wrecker vs rollback",
+      "slug": "wrecker-vs-rollback",
+      "canonical": "https://commercialvehicleguide.com/guides/wrecker-vs-rollback.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "vocational truck",
+      "slug": "vocational-truck",
+      "canonical": "https://commercialvehicleguide.com/guides/vocational-truck.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "bucket truck financing",
+      "slug": "bucket-truck-financing",
+      "canonical": "https://commercialvehicleguide.com/guides/bucket-truck-financing.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "starting a trucking company",
+      "slug": "starting-a-trucking-company",
+      "canonical": "https://commercialvehicleguide.com/guides/starting-a-trucking-company.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "how do i start a trucking company",
+      "slug": "how-do-i-start-a-trucking-company",
+      "canonical": "https://commercialvehicleguide.com/guides/how-do-i-start-a-trucking-company.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "how to start a trucking business",
+      "slug": "how-to-start-a-trucking-business",
+      "canonical": "https://commercialvehicleguide.com/guides/how-to-start-a-trucking-business.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "best rollback tow truck",
+      "slug": "best-rollback-tow-truck",
+      "canonical": "https://commercialvehicleguide.com/guides/best-rollback-tow-truck.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "vocational trucks",
+      "slug": "vocational-trucks",
+      "canonical": "https://commercialvehicleguide.com/guides/vocational-trucks.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "rollback towing",
+      "slug": "rollback-towing",
+      "canonical": "https://commercialvehicleguide.com/guides/rollback-towing.html",
+      "reason": "file_exists"
+    },
+    {
+      "query": "lease purchase program",
+      "slug": "lease-purchase-program",
+      "canonical": "https://commercialvehicleguide.com/guides/lease-purchase-program.html",
+      "reason": "file_exists"
+    }
+  ],
+  "sitemap": {
+    "fragmentUpdated": true,
+    "merged": true,
+    "validatedInSitemapXml": [
+      {
+        "url": "https://commercialvehicleguide.com/guides/rollback-vs-wrecker.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/what-is-a-vocational-truck.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/vacuum-truck-business.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/used-truck-financing.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/what-are-vocational-trucks.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/dot-inspection-checklist.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/how-to-start-a-trucking-company.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/how-to-start-a-flatbed-trucking-business.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/vocational-truck-meaning.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/lease-purchase.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/truck-dot-inspection-checklist.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/wrecker-vs-rollback.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/vocational-truck.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/bucket-truck-financing.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/starting-a-trucking-company.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/how-do-i-start-a-trucking-company.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/how-to-start-a-trucking-business.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/best-rollback-tow-truck.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/sleeper-truck-financing.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/dot-truck-inspection-checklist.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/how-to-start-a-fleet-service-business.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/rollback-tow-truck-financing.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/refrigerated-freight-requirements.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/semi-truck-financing-for-new-owner-operators.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/vocational-trucks.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/lease-purchase-is.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/how-to-finance-a-semi-truck.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/telecom-truck.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/rollback-towing.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/start-a-truck-company.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/starting-trucking-company.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/lease-purchase-program.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/wrecker-vs-tow-truck.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/equipment-financing.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/starting-your-own-trucking-company.html",
+        "present": true
+      },
+      {
+        "url": "https://commercialvehicleguide.com/guides/tow-truck-rollback.html",
+        "present": true
+      }
+    ]
+  }
+}
